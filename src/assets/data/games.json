@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Tetris Clone",
+        "preview":["/assets/images/test-img-2.jpg", "/assets/images/test-img-1.jpg", "/assets/images/test-img-3.jpg"], 
+        "description": "A simple tetris clone I made to test the Godot 4 environment, moving over from engines such as Unity and Unreal",
+        "tags": ["puzzle", "clone", "itch.io", "Godot"], 
+        "year": 2023,
+        "type": "iframe",
+        "thumbnail_url": "/assets/thumbnails/tetris_thumbnail.png",
+        "url": "https://itch.io/embed-upload/9895434?color=333333",
+        "outbound_url": "https://billyshouse.itch.io/tetris-clone",
+        "discipline": "game_dev",
+        "mobile": false, 
+        "playview": "widget"
+    }
+]

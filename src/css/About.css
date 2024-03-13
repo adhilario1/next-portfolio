@@ -1,0 +1,7 @@
+.about{
+    flex-direction: column;
+}
+
+.section {
+    margin: 1.5vh 1.5vw;
+}

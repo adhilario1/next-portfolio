@@ -1,0 +1,20 @@
+.navbar-item{
+    padding: 1em 1em;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-item:hover {
+    background-color: #ffbf00;
+    color: #000;
+    justify-content: space-evenly;
+    
+}
+
+.navbar-item-text {
+    padding: 0 1em;
+}

@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #ffbf00;;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position:fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite/*#003153*/;
+}
+
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  min-height: 75vh;
+  padding: 1em;
+  border-radius: 5px;
+  border: 2pt double #ff8b00;
+  background-color: #101010;
+  color: antiquewhite;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.formatted-text {
+  tab-size: 2;
+  
+}
+
+.primary-label {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: medium;
+  font-style: normal;
+}
+
+.secondary-label {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.link-box {
+  display:flex;
+  text-decoration: none;
+  color:inherit;
+}
+
+.link-text{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

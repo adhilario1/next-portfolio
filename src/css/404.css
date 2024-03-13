@@ -1,0 +1,21 @@
+.four-o-four {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+.inline-text{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.mobile404 {
+    margin-bottom: 1vh;
+}
+
+.web404 {
+    width:90vw
+}
