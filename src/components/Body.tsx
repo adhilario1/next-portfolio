@@ -27,10 +27,10 @@ const Body = ({children}: Props) => {
 
     return (
         <div className="main">
-                <div className="bounding-box">
-                    {children}
-                </div>
+            <div className="bounding-box">
+                {children}
             </div>
+        </div>
     );
 ;}
 

@@ -1,3 +1,38 @@
+.game-list-item {
+    display: block;
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.game-list-item:hover {
+    background-color: blueviolet;
+}
 .games {
     display: block;
+}
+
+.game-data {
+    display:flex;
+}
+
+.game-list {
+    background-color: aquamarine;
+    overflow-y: scroll;
+}
+.game-thumbnail img{
+    width: 200px;
+    height: 200px;
+}
+
+@media only screen and (min-width: 686px) {
+    .game {
+        min-width: 400px;
+        width: 75vw;
+        max-width: 1200px;
+    }
+
+    .game-thumbnail img{
+        width: 300px;
+        height: 300px;
+    }
 }

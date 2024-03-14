@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextportfolio-dev-225729-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492182369:role/amplify-nextportfolio-dev-225729-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492182369:role/amplify-nextportfolio-dev-225729-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
+      "UnauthRoleName": "amplify-nextportfolio-dev-225729-unauthRole",
+      "StackName": "amplify-nextportfolio-dev-225729",
+      "StackId": "arn:aws:cloudformation:eu-west-1:381492182369:stack/amplify-nextportfolio-dev-225729/124f76a0-e18d-11ee-90a3-061ad90adfe1",
+      "AmplifyAppId": "d1tqlij6oidc9c"
+    },
+    "categories": {
+      "auth": {
+        "nextportfolio": {}
+      },
+      "api": {
+        "nextportfolio": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1tqlij6oidc9c",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
