@@ -1,5 +1,5 @@
-import React, { PropsWithChildren, ReactElement } from 'react'
-import dynamic from 'next/dynamic'
+import React, {  ReactElement } from 'react'
+//import dynamic from 'next/dynamic'
 
 /*
 const ClientComponent = dynamic(() => import('./ClientComponent'), {
@@ -14,11 +14,12 @@ interface Props {
 }
 
 function GameWidget({className, game_id, children}: Props) {
-  return (
-    <a className="widget" href={`/games/${game_id}`}>
-        {children}
-    </a>
-  )
+    console.log(className?.toString());
+    return (
+        <a className="widget" href={`/games/${game_id}`}>
+            {children}
+        </a>
+    )
 }
 
 export default GameWidget

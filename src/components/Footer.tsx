@@ -14,10 +14,6 @@ const Footer = () => {
         setWidth(width);
         setHeight(height);
     }, [])
-    const breakpoint = 685;
-
-    
-
     var device;
     if (height && width < breakpoint) {
         device="-f--mobile";

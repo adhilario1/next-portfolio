@@ -39,7 +39,7 @@ export default function Games({breakpoint}: Props) {
     return (
         <Body>
             <>
-                <Header breakpoint={breakpoint}/>
+                <Header/>
                 <div className="content games">
                     <div className="page-title">
                         <h1 className="secondary-label">Games</h1>

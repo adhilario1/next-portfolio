@@ -6,14 +6,10 @@ import Footer from "@/components/Footer";
 import '@/css/About.css';
 
 
-interface Props {
-    breakpoint?: number;
-}
-
-const About = ({breakpoint}: Props) => {
+const About = () => {
     return (
         <>
-        <Header breakpoint={breakpoint}/>
+        <Header/>
         <Body>
             <div className="content about">
                 <h1 className="secondary-label">about.</h1>

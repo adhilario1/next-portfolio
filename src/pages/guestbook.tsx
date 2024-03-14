@@ -1,14 +1,11 @@
 import React from "react";
 import Header from '@/components/Header';
 import Body from '@/components/Body'
-interface Props {
-    breakpoint?: number;
-}
 
-const Guestbook = ({breakpoint}: Props) => {
+const Guestbook = () => {
     return (
         <>
-        <Header breakpoint={breakpoint}/>
+        <Header/>
         <Body>
             <div className="content guestbook">
                 guestbook

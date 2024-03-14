@@ -1,14 +1,14 @@
 import { generateServerClientUsingCookies } from '@aws-amplify/adapter-nextjs/api';
 import { cookies } from 'next/headers';
 
-import {revalidatePath} from 'next/cache'
+//import {revalidatePath} from 'next/cache'
 
 import * as queries from '@/graphql/queries';
 import config from '@/amplifyconfiguration.json';
 import Header from '@/components/Header';
 import Body from '@/components/Body';
 import Footer from '@/components/Footer';
-import { Games } from '@/API';
+//import { Games } from '@/API';
 
 const cookiesClient = generateServerClientUsingCookies({
   config,

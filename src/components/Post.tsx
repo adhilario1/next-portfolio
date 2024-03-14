@@ -1,6 +1,6 @@
 import React from "react";
 import './../css/Post.css'
-import {Post as PostModel} from './../../models/Post'
+import {Post as PostModel} from '@/scripts/Post'
 
 interface Props {
     selectPost: Function;

@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import '@/css/Home.css'
 
 const Home = () => {
-    const breakpoint = 685;
+    
     return (
         <>
         <Header />

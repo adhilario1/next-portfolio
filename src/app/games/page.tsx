@@ -16,8 +16,8 @@ import '@/css/Arcade.css';
 import { generateServerClientUsingCookies } from '@aws-amplify/adapter-nextjs/api';
 import { cookies } from 'next/headers';
 
-import {revalidatePath} from 'next/cache'
-import * as mutations from '@/graphql/mutations';
+//import {revalidatePath} from 'next/cache'
+//import * as mutations from '@/graphql/mutations';
 import * as queries from '@/graphql/queries';
 import config from '@/amplifyconfiguration.json';
 
@@ -27,13 +27,14 @@ const cookiesClient = generateServerClientUsingCookies({
 });
 
 //data
-import { CreateGamesInput } from "@/API";
+//import { CreateGamesInput } from "@/API";
 
 //import local_games from '@/assets/data/games.json'
 //import { Game } from "@/scripts/GameModel";
 //import { title } from "process";
 import GameWidget from "@/components/GameWidget";
 
+/*
 async function createGameEntry(formData: FormData) {
     'use server'
 
@@ -76,6 +77,7 @@ async function createGameEntry(formData: FormData) {
     revalidatePath('/games');
 
 }
+*/
 export default async function Games() {
     const { data, errors } = await cookiesClient.graphql({
         query: queries.listGames

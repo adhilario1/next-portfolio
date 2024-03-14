@@ -1,32 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import SideBar from "./SideBar";
 import NavBar from "./NavBar";
 
 import '@/css/Header.css'
 
-const breakpoint = 685;
-
 const Header = () => {
-    const [width, setWidth] = useState(0);
-    const [height, setHeight] = useState(0);
-    const [mobile, setMobile] = useState(false);
-
-    useEffect(() =>{
-        const {innerWidth: width, innerHeight: height} = window;
-        setWidth(width);
-        setHeight(height);
-
-        if (breakpoint && (height && width < breakpoint)) {
-            setMobile(true);
-        } else {
-            setMobile(false);
-        }
-        
-    }, [])
-
     return (
         <div className='header'>
             <div className='container'>

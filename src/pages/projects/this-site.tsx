@@ -5,11 +5,8 @@ import Body from '@/components/Body';
 import '@/css/Exhibit.css'
 import Footer from '@/components/Footer';
 
-interface Props {
-    breakpoint?: number;
-}
 
-const Exhibit = ({breakpoint}: Props) => {
+const Exhibit = () => {
     //const {exhibitID} = useParams()
     return (
         <>
