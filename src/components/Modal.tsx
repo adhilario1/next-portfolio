@@ -2,10 +2,11 @@
 
 import React, { ReactElement, useEffect, useState } from "react";
 
-import { Post } from "@/code/models/Post";
-import { Game } from "@/code/models/game";
+import { Game } from "@/scripts/GameModel";
+import { Post } from "@/scripts/Post";
 
 import '@/css/Modal.css'
+
 
 interface Props {
     className?: string;
@@ -168,7 +169,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                     <div className="meta-data">
                         <div>
                             <h2 className="secondary-label">{game?.title}</h2>
-                            <h3><i>{game?.discipline} | {game?.project} {game?.year}</i></h3>
+                            <h3><i> {game?.year}</i></h3>
                         </div>
                         <div className="description text">
                             <p>
@@ -189,7 +190,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                             <h2>{game?.title}</h2>
                         </div>
                         <div>
-                            {game?.year} {game?.discipline} {game?.project}
+                            {game?.year}
                         </div>
                         <div className="viewport-body">
                             {((!game?.mobile && !mobile) || (game?.mobile && mobile)) && (
