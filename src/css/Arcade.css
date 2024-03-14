@@ -1,7 +1,7 @@
 .game-list-item {
     display: block;
-    width: 100%;
-    height: 200px;
+    width:fit-content;
+    height: fit-content;
 }
 
 .game-list-item:hover {
@@ -12,18 +12,27 @@
 }
 
 .game-data {
-    display:flex;
+    text-align: center;
 }
 
 .game-list {
-    border: 1px solid #444;
+    display: block;
+    margin: auto;
+    border-top: 1px dotted #444;
     height: 60vh;
-    margin-top: 5vh;
+    width:100%;
+    max-width: 1200px;
+    margin-top: 15px;
     overflow-y: scroll;
+    float: left;
 }
 .game-thumbnail img{
     width: 200px;
     height: 200px;
+}
+
+.game-metadata {
+    display: none;
 }
 
 @media only screen and (min-width: 686px) {
@@ -39,5 +48,9 @@
     }
     .game-list-item {
         height: 300px;
+    }
+
+    .game-metadata {
+        display: block;
     }
 }

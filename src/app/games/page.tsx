@@ -141,8 +141,8 @@ export default async function Games() {
                                                     <img src={game.thumbnail_url?.toString()} />
                                                 </div>
                                                 <div className="game-metadata">
-                                                    {game.id}
-                                                    {game.title}
+                                                    <h3 className="teriary-label-bold">{game.title}</h3>
+                                                    
                                                 </div>
                                                 
                                             </ div>

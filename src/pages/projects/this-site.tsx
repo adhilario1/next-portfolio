@@ -21,13 +21,26 @@ const Exhibit = () => {
                             <br/><br/>
                             <h2 className='secondary-label'>Services Used</h2>
                             <p className='formatted-text indented'>
-                                As mentioned this was built originally with ReactJS using typescript, but later converted to NextJS for the use of SSR (server side rendering). I chose NextJS over express, or an alternative server framework such as express since this site is hosted on AWS Amplify, which supports next natively. The domain name registration and hosting is through AWS Route53 and the aforementioned Amplify respectively. The data base (if implemented by the time of reading) is also through AWS using their RDS service or DynamoDB if the 12 month free trial has since expired. <br /><br/> 
+                                As mentioned this was built originally with ReactJS using typescript, but later converted to NextJS for the use of SSR 
+                                (server side rendering). I chose NextJS over express, or an alternative server framework akin to express, since this site 
+                                is hosted on AWS Amplify, which supports nextJS natively.
+                                In hindsight, I would have opted to use the express method, not for any technical reason, although deploying a nextJS app on 
+                                Amplify is "particular" to say the least, but rather that I am not a huge fan of nextJS' path-file system. 
+                                (Especially the App Router. I mean, seriously, who though it was a good idea for the React Component for each page to be 
+                                written in a file called Page.tsx, only deliniated by the file path, which isn't always visible in code editors.)
+                                <br/><br/> 
+                                The domain name registration and hosting is through AWS Route53 and the aforementioned Amplify respectively. 
+                                Backend implementation is also implemented using Amplify Studio with database interaction handled by a GraphQL API for the games page, and a REST API for the Gallery page.
+                                As of now, the two separate API are wholly unnecessary ourside of a demonstration of knowledge, since both are essentially fetching of data.
+                                However, the choice of using GraphQL for the games page was deliberate since it was my intention to make that page more interactive and dynamic, which GraphQL us better suited for.
+                                Although, in what way that page will be more "interactive and dynamic," I don't know yet.  
+                                <br/><br/> 
                             </p>
                             <h2 className='secondary-label'>So, Why The Name?</h2>
                             <p className='formatted-text indented'>
-                                Well, obviously the "adam" part is my first name, and while i could have used a standard extension <i>.com</i>, but the <i>.info</i> seemed apt. However, I assume any question about the domain, assuming their were any, is the "rev" prefix. Sure, if given the opportunity, I would have gladly taken any variation of just my name, but being given a relatively common name, the likelyhood of getting something like <i>adam.info</i> or even <i>adam.biz</i> (both taken) would be nigh impossible. 
-                                <br/><br/>
-                                However, on a whim in 2016, I became ordained by the Universal Life Church and so technically I'm a registered minister and therefore can be styled as Reverend. While not the exact type of employment I am currently looking for, I guess you can send me an email for inquiry.
+                                Well, obviously there was absolutely no way I was going to be able to get a domain of any extention comprised of solely of my first name
+                                when it's something as common as Adam, so I opted for a variation on my middle name William (which is also unfortunately very common), Billy, 
+                                and is meant to be read as Billy's Biz because I am Billy and this is my "biz".
                             </p>
                         </div>
                     </div>

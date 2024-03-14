@@ -1,0 +1,98 @@
+:root{
+    --maincarousel-height: calc(70vw*315/560);
+}
+
+#carousel{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: center;
+    
+}
+
+#carousel-butts {
+    display: flex;
+    justify-content: space-around;
+}
+
+#carousel-menu {
+    display: block;
+    margin: 20px auto 20px;
+    width: fit-content;
+}
+
+#main-img iframe { 
+    display: block;
+    margin: auto;
+    border: none;
+    
+    width:70vw;
+    max-width: 560px;
+    height: calc(var(--maincarousel-height));
+    max-height: 315px;
+    border-radius: 0;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    object-fit: fill;
+}
+
+#main-img {
+    display: block;
+    margin: auto;
+    width: 70vw;
+    max-width: 560px;
+    height: var(--maincarousel-height);
+    max-height: 315px;
+    background: #010101;
+    border-radius: 0;
+    border: 3px solid #333;
+}
+.clickable {
+    width: 200px;
+    height:200px;
+    cursor: pointer;
+    margin-right: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable .cover {
+    position: absolute;
+    
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(1,1,1,.5);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clickable iframe{
+    height: 200px;
+    border: none;
+}
+
+
+.carousel-item {
+    height: 200px;
+    
+}
+
+.nav-butt {
+    display: flex;
+    height: fit-content;
+    width: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+.nav-butt:hover{
+    background-color: #333;
+
+}
+
+

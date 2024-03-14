@@ -1,0 +1,66 @@
+input[type=submit] {
+    color: antiquewhite;
+    background-color: #111;
+    border: 3px solid antiquewhite;
+    padding: 10px 30px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;    
+    font-size: large;
+}
+
+input[type=submit]:hover {
+    background-color: #ff8b00;
+    color: #111;
+    border: 3px solid #ff8b00;
+}
+
+.contact-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field input{
+    border: 2px solid antiquewhite;
+    background-color: #111;
+    color: antiquewhite;
+    padding: 10px;
+    width: 30vw;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;    
+    font-size: large;
+}
+
+.field textarea {
+    border: 2px solid antiquewhite;
+    background-color: #111;
+    color: antiquewhite;
+
+    height: 400px;
+    padding: 10px;
+    resize: none;
+    overflow-y: scroll;
+
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;    
+    font-size: medium;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    
+}

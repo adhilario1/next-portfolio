@@ -59,7 +59,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
             <div className="game_thumbnail">
                 <img src={thumbnail} alt={`${game?.title} game thumbnail`} onError={({ currentTarget}) => {
                     currentTarget.onerror = null;
-                    currentTarget.src = './assets/default-game-thumbnail.png';
+                    currentTarget.src = './assets/images/default-game-thumbnail.png';
                 }} />
             </div>
         )

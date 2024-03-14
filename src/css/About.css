@@ -2,6 +2,52 @@
     flex-direction: column;
 }
 
+.bsc .pdf {
+    text-align: center;
+    padding: 20px;
+}
+.bsc .pdf embed{
+    
+    display: block;
+    margin: auto;
+}
+.profile {
+    display: block;
+    margin: 15px auto ;
+}
+.profile img{
+    width: 300px;
+    height: auto;
+}
 .section {
     margin: 1.5vh 1.5vw;
+}
+
+.section h2 {
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+.slideshow-bob {
+    padding: 20px;
+}
+.slideshow-bob iframe{
+    display: block;
+    margin: auto;
+}
+.slideshow-bob p{
+    text-align: center;
+}
+.video iframe {
+    display: block;
+    margin: auto;
+    border: none;
+    width:70vw;
+    max-width: 560px;
+    height: calc(calc(70vw*315/560));
+    max-height: 315px;
+}
+
+.work-sample {
+    padding: 20px;
+    text-align: center;
 }
