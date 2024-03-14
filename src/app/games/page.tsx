@@ -34,11 +34,6 @@ import { CreateGamesInput } from "@/API";
 //import { title } from "process";
 import GameWidget from "@/components/GameWidget";
 
-interface Props {
-    breakpoint?: number;
-}
-
-
 async function createGameEntry(formData: FormData) {
     'use server'
 
@@ -81,7 +76,7 @@ async function createGameEntry(formData: FormData) {
     revalidatePath('/games');
 
 }
-export default async function Games({breakpoint}: Props) {
+export default async function Games() {
     const { data, errors } = await cookiesClient.graphql({
         query: queries.listGames
     });
