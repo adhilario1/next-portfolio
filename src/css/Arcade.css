@@ -1,11 +1,11 @@
 .game-list-item {
     display: block;
     width: 100%;
-    background-color: chartreuse;
+    height: 200px;
 }
 
 .game-list-item:hover {
-    background-color: blueviolet;
+    background-color: #ff8b00;
 }
 .games {
     display: block;
@@ -16,7 +16,9 @@
 }
 
 .game-list {
-    background-color: aquamarine;
+    border: 1px solid #444;
+    height: 60vh;
+    margin-top: 5vh;
     overflow-y: scroll;
 }
 .game-thumbnail img{
@@ -33,6 +35,9 @@
 
     .game-thumbnail img{
         width: 300px;
+        height: 300px;
+    }
+    .game-list-item {
         height: 300px;
     }
 }
