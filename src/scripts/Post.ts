@@ -6,6 +6,6 @@ export interface Post {
     thumbnail_url?: string,
     year: number,
     description: string,
-    discipline:string,
+    discipline?:string,
     project?: string
 }

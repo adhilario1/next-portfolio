@@ -28,7 +28,7 @@ const Gallery = ({breakpoint}: Props) => {
 
     const filterData = (filter: string) => {
         const filteredData = posts.filter((item) => 
-            item.discipline.toLowerCase().includes(filter.toLowerCase())
+            item.discipline?.toLowerCase().includes(filter.toLowerCase())
         );
         setFilteredData(filteredData);
     };
@@ -54,23 +54,6 @@ const Gallery = ({breakpoint}: Props) => {
                         else {
                             if (a.id < b.id ) return -1
                             else return 1;
-                        }
-                    }
-                } else if (sort==="discipline"){
-                    if (a.discipline < b.discipline) return -1
-                    else if (a.discipline > b.discipline) return 1
-                    else {
-                        if (a.title < b.title) {
-                            return -1;
-                        } else if (a.title > b.title) {
-                            return 1;
-                        } else {
-                            if (a.year < b.year) return -1
-                            else if (a.year > b.year) return 1
-                            else {
-                                if (a.id < b.id ) return -1
-                                else return 1;
-                            }
                         }
                     }
                 } else if (sort==="type"){
