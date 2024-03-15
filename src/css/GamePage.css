@@ -1,0 +1,23 @@
+.description {
+    margin: 20px;
+}
+
+.game {
+    flex-direction: column;
+}
+.game-header {
+    
+}
+
+.game-link {
+    display: block;
+    margin: auto;
+}
+
+.game-link iframe {
+    color:antiquewhite;
+}
+
+.game-preview {
+    
+}
