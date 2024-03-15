@@ -12,7 +12,10 @@ export const getGames = /* GraphQL */ `query GetGames($id: ID!) {
   getGames(id: $id) {
     id
     title
-    preview
+    preview {
+      nextToken
+      __typename
+    }
     description
     tags
     year
@@ -37,7 +40,6 @@ export const listGames = /* GraphQL */ `query ListGames(
     items {
       id
       title
-      preview
       description
       tags
       year
@@ -56,3 +58,74 @@ export const listGames = /* GraphQL */ `query ListGames(
   }
 }
 ` as GeneratedQuery<APITypes.ListGamesQueryVariables, APITypes.ListGamesQuery>;
+export const getImage = /* GraphQL */ `query GetImage($id: ID!) {
+  getImage(id: $id) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetImageQueryVariables, APITypes.GetImageQuery>;
+export const listImages = /* GraphQL */ `query ListImages(
+  $filter: ModelImageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listImages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      url
+      gameID
+      type
+      description
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListImagesQueryVariables,
+  APITypes.ListImagesQuery
+>;
+export const imagesByGameIDAndUrl = /* GraphQL */ `query ImagesByGameIDAndUrl(
+  $gameID: ID!
+  $url: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelImageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  imagesByGameIDAndUrl(
+    gameID: $gameID
+    url: $url
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      url
+      gameID
+      type
+      description
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ImagesByGameIDAndUrlQueryVariables,
+  APITypes.ImagesByGameIDAndUrlQuery
+>;

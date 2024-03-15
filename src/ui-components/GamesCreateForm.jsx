@@ -191,7 +191,6 @@ export default function GamesCreateForm(props) {
   } = props;
   const initialValues = {
     title: "",
-    preview: [],
     description: "",
     tags: [],
     year: "",
@@ -203,7 +202,6 @@ export default function GamesCreateForm(props) {
     mobile: false,
   };
   const [title, setTitle] = React.useState(initialValues.title);
-  const [preview, setPreview] = React.useState(initialValues.preview);
   const [description, setDescription] = React.useState(
     initialValues.description
   );
@@ -224,8 +222,6 @@ export default function GamesCreateForm(props) {
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setTitle(initialValues.title);
-    setPreview(initialValues.preview);
-    setCurrentPreviewValue("");
     setDescription(initialValues.description);
     setTags(initialValues.tags);
     setCurrentTagsValue("");
@@ -238,13 +234,10 @@ export default function GamesCreateForm(props) {
     setMobile(initialValues.mobile);
     setErrors({});
   };
-  const [currentPreviewValue, setCurrentPreviewValue] = React.useState("");
-  const previewRef = React.createRef();
   const [currentTagsValue, setCurrentTagsValue] = React.useState("");
   const tagsRef = React.createRef();
   const validations = {
     title: [{ type: "Required" }],
-    preview: [{ type: "Required" }],
     description: [{ type: "Required" }],
     tags: [{ type: "Required" }],
     year: [],
@@ -282,7 +275,6 @@ export default function GamesCreateForm(props) {
         event.preventDefault();
         let modelFields = {
           title,
-          preview,
           description,
           tags,
           year,
@@ -355,7 +347,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title: value,
-              preview,
               description,
               tags,
               year,
@@ -379,61 +370,6 @@ export default function GamesCreateForm(props) {
         hasError={errors.title?.hasError}
         {...getOverrideProps(overrides, "title")}
       ></TextField>
-      <ArrayField
-        onChange={async (items) => {
-          let values = items;
-          if (onChange) {
-            const modelFields = {
-              title,
-              preview: values,
-              description,
-              tags,
-              year,
-              type,
-              thumbnail_url,
-              url,
-              outbound_url,
-              outbound_label,
-              mobile,
-            };
-            const result = onChange(modelFields);
-            values = result?.preview ?? values;
-          }
-          setPreview(values);
-          setCurrentPreviewValue("");
-        }}
-        currentFieldValue={currentPreviewValue}
-        label={"Preview"}
-        items={preview}
-        hasError={errors?.preview?.hasError}
-        runValidationTasks={async () =>
-          await runValidationTasks("preview", currentPreviewValue)
-        }
-        errorMessage={errors?.preview?.errorMessage}
-        setFieldValue={setCurrentPreviewValue}
-        inputFieldRef={previewRef}
-        defaultFieldValue={""}
-      >
-        <TextField
-          label="Preview"
-          isRequired={true}
-          isReadOnly={false}
-          value={currentPreviewValue}
-          onChange={(e) => {
-            let { value } = e.target;
-            if (errors.preview?.hasError) {
-              runValidationTasks("preview", value);
-            }
-            setCurrentPreviewValue(value);
-          }}
-          onBlur={() => runValidationTasks("preview", currentPreviewValue)}
-          errorMessage={errors.preview?.errorMessage}
-          hasError={errors.preview?.hasError}
-          ref={previewRef}
-          labelHidden={true}
-          {...getOverrideProps(overrides, "preview")}
-        ></TextField>
-      </ArrayField>
       <TextField
         label="Description"
         isRequired={true}
@@ -444,7 +380,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description: value,
               tags,
               year,
@@ -474,7 +409,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags: values,
               year,
@@ -537,7 +471,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year: value,
@@ -571,7 +504,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,
@@ -605,7 +537,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,
@@ -639,7 +570,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,
@@ -673,7 +603,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,
@@ -707,7 +636,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,
@@ -741,7 +669,6 @@ export default function GamesCreateForm(props) {
           if (onChange) {
             const modelFields = {
               title,
-              preview,
               description,
               tags,
               year,

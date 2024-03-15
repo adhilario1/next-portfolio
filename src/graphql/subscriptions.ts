@@ -12,7 +12,10 @@ export const onCreateGames = /* GraphQL */ `subscription OnCreateGames($filter: 
   onCreateGames(filter: $filter) {
     id
     title
-    preview
+    preview {
+      nextToken
+      __typename
+    }
     description
     tags
     year
@@ -35,7 +38,10 @@ export const onUpdateGames = /* GraphQL */ `subscription OnUpdateGames($filter: 
   onUpdateGames(filter: $filter) {
     id
     title
-    preview
+    preview {
+      nextToken
+      __typename
+    }
     description
     tags
     year
@@ -58,7 +64,10 @@ export const onDeleteGames = /* GraphQL */ `subscription OnDeleteGames($filter: 
   onDeleteGames(filter: $filter) {
     id
     title
-    preview
+    preview {
+      nextToken
+      __typename
+    }
     description
     tags
     year
@@ -76,4 +85,52 @@ export const onDeleteGames = /* GraphQL */ `subscription OnDeleteGames($filter: 
 ` as GeneratedSubscription<
   APITypes.OnDeleteGamesSubscriptionVariables,
   APITypes.OnDeleteGamesSubscription
+>;
+export const onCreateImage = /* GraphQL */ `subscription OnCreateImage($filter: ModelSubscriptionImageFilterInput) {
+  onCreateImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnCreateImageSubscriptionVariables,
+  APITypes.OnCreateImageSubscription
+>;
+export const onUpdateImage = /* GraphQL */ `subscription OnUpdateImage($filter: ModelSubscriptionImageFilterInput) {
+  onUpdateImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnUpdateImageSubscriptionVariables,
+  APITypes.OnUpdateImageSubscription
+>;
+export const onDeleteImage = /* GraphQL */ `subscription OnDeleteImage($filter: ModelSubscriptionImageFilterInput) {
+  onDeleteImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnDeleteImageSubscriptionVariables,
+  APITypes.OnDeleteImageSubscription
 >;

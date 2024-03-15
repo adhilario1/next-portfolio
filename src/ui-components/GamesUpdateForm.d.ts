@@ -24,7 +24,6 @@ export declare type ValidationResponse = {
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type GamesUpdateFormInputValues = {
     title?: string;
-    preview?: string[];
     description?: string;
     tags?: string[];
     year?: number;
@@ -37,7 +36,6 @@ export declare type GamesUpdateFormInputValues = {
 };
 export declare type GamesUpdateFormValidationValues = {
     title?: ValidationFunction<string>;
-    preview?: ValidationFunction<string>;
     description?: ValidationFunction<string>;
     tags?: ValidationFunction<string>;
     year?: ValidationFunction<number>;
@@ -52,7 +50,6 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type GamesUpdateFormOverridesProps = {
     GamesUpdateFormGrid?: PrimitiveOverrideProps<GridProps>;
     title?: PrimitiveOverrideProps<TextFieldProps>;
-    preview?: PrimitiveOverrideProps<TextFieldProps>;
     description?: PrimitiveOverrideProps<TextFieldProps>;
     tags?: PrimitiveOverrideProps<TextFieldProps>;
     year?: PrimitiveOverrideProps<TextFieldProps>;
