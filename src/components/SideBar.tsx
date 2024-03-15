@@ -23,10 +23,6 @@ const linktree = [
         "url": "/about"
     },
     {
-        "label": "guestbook",
-        "url": "/guestbook"
-    },
-    {
         "label": "this site",
         "url": "/projects/this-site"
     },

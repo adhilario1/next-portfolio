@@ -71,17 +71,17 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
         if (type===undefined || type==="") return (<></>)
         if (type==="image") {
             //setImage(true);
-            return (<img className={`image ${t_bool}`} src={post?.url} alt="/assets/images/default.jpg"></img>);
+            return (<img className={`full image ${t_bool}`} src={post?.url} alt="/assets/images/default.jpg"></img>);
             
         } else if (type==="iframe") {
             //setYT(true);
-            return (<iframe className={`video ${t_bool}`} width="560" height="315" src={post?.url} title="YouTube video player" /*frameborder="0"*/ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>);
+            return (<iframe className={`full video ${t_bool}`} width="560" height="315" src={post?.url} title="YouTube video player" /*frameborder="0"*/ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>);
         } else if (type==="video"){
             var fileExt = post?.url.split('.').pop();
             //setVideo(true);
             return (
             <video>
-                <source className={`image ${t_bool}`} src={post?.url} type={`video/${fileExt}`}/>
+                <source className={`full video ${t_bool}`} src={post?.url} type={`video/${fileExt}`}/>
                 Browser does not support HTML video
             </video>)
         }
@@ -91,15 +91,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
     if (post) {
         return (
             <>
-            {!mobile && (
-                <div className={`open-modal ${className}`} onClick={toggleModal}> 
-                {contentType(true, post?.type)}
-                <div className="cover"></div>
-            </div>
-            )}
-            {mobile && (
-                <>
-                <div className={`open-modal ${className}`} onClick={toggleModal}>
+            <div className={`open-modal ${className}`} onClick={toggleModal}>
                     <div>
                         {contentType(true, post?.type)}
                     </div>
@@ -116,13 +108,10 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                     </div>
                     
                 </div>
-                </>
-            )
-            }
             {modal && (
                 <div className="modal-container">
                     <div onClick={toggleModal} className="overlay" />
-                    <div className={`${modalClassname}`}>
+                    <div className={`viewer ${modalClassname}`}>
                         <button className="close-modal" onClick={toggleModal}>[X]</button>
                         <div className="secondary-label">
                             <h2>{post?.title}</h2>
@@ -131,8 +120,8 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                             {contentType(false, post?.type)}
                             
                         </div>
-                        <div>
-                            {post?.year} {post?.discipline} {post?.project}
+                        <div className="tertiary-label-bold full-meta">
+                            {post?.year} | {post?.discipline} | {post?.project}
                         </div>
                         <div className="description">
                             {post?.description}

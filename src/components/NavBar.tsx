@@ -73,9 +73,9 @@ const NavBar = () => {
                             </Link>
                         </div>
                         <div className="nav-container">
-                            <Link className="navbar-item" href="/guestbook" aria-label="guestbook">
+                            <Link className="navbar-item" href="/contact/email" aria-label="guestbook">
                                 <span>[ </span>
-                                <span>   guestbook   </span>
+                                <span>   contact   </span>
                                 <span>]</span>
                             </Link>
                         </div>
