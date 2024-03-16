@@ -8,9 +8,8 @@ import Footer from '@/components/Footer';
 //style
 import '@/css/Home.css'
 import '@/css/Header.css'
-import { BiArrowToLeft } from 'react-icons/bi';
-import { CgArrowLongRightC } from 'react-icons/cg';
-import { BsArrowLeft, BsArrowLeftCircle, BsArrowLeftCircleFill, BsArrowRightCircle, BsArrowRightCircleFill } from 'react-icons/bs';
+
+import { BsArrowLeftCircle, BsArrowLeftCircleFill } from 'react-icons/bs';
 const Home = () => {
     
     return (
@@ -36,11 +35,9 @@ const Home = () => {
                         
                     </p>
                     <div className='link-grid'>
-                        <div/>
-                        <div/>
                         <a href='/projects/gallery'>
                             <div className='text left'>
-                                <h2 className='tertiary-label-bold'>Gallery</h2>
+                                <h2 className='tertiary-label-bold gold'>Gallery</h2>
                                 <p>Images and Videos of things I've made over the years</p>
                             </ div>
                             <div className='arrow-container'>
@@ -50,7 +47,7 @@ const Home = () => {
                         </a>
                         <a href='/games'>
                             <div className='text right'>
-                                <h2 className='tertiary-label-bold'>Games!</h2>
+                                <h2 className='tertiary-label-bold gold'>Games!</h2>
                                 <p>Check out (or play, hopefully) some games I made</p>
                             </ div>
                             <div className='arrow-container'>
@@ -60,7 +57,7 @@ const Home = () => {
                         </a>
                         <a href='/about'>
                             <div className='text left'>
-                                <h2 className='tertiary-label-bold'>About</h2>
+                                <h2 className='tertiary-label-bold gold'>About</h2>
                                 <p>It's in the name: a short biography of myself with relavant info. (Mostly my educational background.)</p>
                             </ div>
                             <div className='arrow-container'>
@@ -71,7 +68,7 @@ const Home = () => {
                         <a href='/contact/email'>
                             
                             <div className='text right'>
-                                <h2 className='tertiary-label-bold'>Contact</h2>
+                                <h2 className='tertiary-label-bold gold'>Contact</h2>
                                 <p>Drop me an email!</p>
                             </ div>
                             <div className='arrow-empty'>
@@ -83,7 +80,7 @@ const Home = () => {
                         <a href='/projects/this-site'>
                             
                             <div className='text left'>
-                                <h2 className='tertiary-label-bold'>Read About This Site</h2>
+                                <h2 className='tertiary-label-bold gold'>Read About This Site</h2>
                                 <p>Read about how I made this website and what service are availed to keep it running.</p>
                             </ div>
                             <div className='arrow-empty'>
@@ -91,6 +88,8 @@ const Home = () => {
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
                         </a>
+                        <div/>
+                        <div/>
                     </div>
 
                 </div>

@@ -3,18 +3,18 @@ import { cookies } from 'next/headers';
 
 //import {revalidatePath} from 'next/cache'
 
-import * as queries from '@/graphql/queries';
+//import * as queries from '@/graphql/queries';
 import * as custom_queries from '@/graphql/customQueries'
 import config from '@/amplifyconfiguration.json';
 import Header from '@/components/Header';
 import Body from '@/components/Body';
 import Footer from '@/components/Footer';
-//import ImageCarousel from '@/components/ImageCarousel';
-//import { Games } from '@/API';
-import { Image } from '@/API';
+import ImageCarousel from '@/components/ImageCarousel';
+import { BsArrowLeftCircle } from 'react-icons/bs';
+
 //style
 import '@/css/GamePage.css'
-import ImageCarousel from '@/components/ImageCarousel';
+
 
 
 const cookiesClient = generateServerClientUsingCookies({
@@ -49,8 +49,11 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <>
-    <Header />
-    <Body>
+    {/*<Header />*/}
+    <a id='back-arrow' href='/games'>  
+      <BsArrowLeftCircle size={40}/>
+    </a>
+    <div>
       <div>
         {(!game || errors) && (
           <div className='content'>
@@ -102,7 +105,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         )}
       </div>
-    </Body>
+    </div>
     <Footer />
     </>
   )

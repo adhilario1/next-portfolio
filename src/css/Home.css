@@ -3,6 +3,10 @@ a {
     color: antiquewhite;
 }
 
+.gold {
+    color: #ff8b00
+}
+
 .home {
     padding: 0 5%;
     overflow: hidden;
@@ -59,6 +63,7 @@ a {
 }
 
 .arrow-selected {
+    color:#555;
     display: block;
 }
 
@@ -68,6 +73,10 @@ a {
     background-color: #111;
     border-radius: 100%;
     border: 3px solid #111;
+}
+
+.link-grid a .arrow-unselected {
+    color: #555;
 }
 
 .link-grid a:hover .arrow-unselected {

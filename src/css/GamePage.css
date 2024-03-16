@@ -1,12 +1,21 @@
+#back-arrow {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top:10px;
+    right: 10px;
+    padding:10px;
+    border-radius: 5px;
+    background-color: rgba(.06, .06, .06, .6);
+    color:antiquewhite;
+}
+
 .description {
     margin: 20px;
 }
 
 .game {
     flex-direction: column;
-}
-.game-header {
-    
 }
 
 .game-link {
@@ -18,6 +27,8 @@
     color:antiquewhite;
 }
 
-.game-preview {
-    
+@media only screen and (max-width: 686px){
+    #back-arrow {
+        position: absolute;
+    }
 }
