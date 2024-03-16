@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import '@/css/Body.css'
+import '@/css/App.css'
 
 interface Props {
     children?: React.ReactElement;
@@ -26,11 +27,14 @@ const Body = ({children}: Props) => {
     }
 
     return (
+        <>
+        <div className='background' />
         <div className="main">
             <div className="bounding-box">
                 {children}
             </div>
         </div>
+        </>
     );
 ;}
 
