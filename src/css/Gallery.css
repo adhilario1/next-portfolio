@@ -3,6 +3,8 @@
     color:antiquewhite;
     border: 2px solid antiquewhite;
     border-radius: 3px;
+    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 .dropdown option {
@@ -10,16 +12,26 @@
     border: 2px solid antiquewhite;
 }
 
+.filter {
+    margin-right: 10px;
+    
+}
 .gallery {
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
+.gallery-title {
+    text-align: left;
+}
 .spacer {
     flex:1;
 }
 
 .subheader {
     width: 100%;
+    height:50px;
     display: flex;
 }
 
@@ -29,6 +41,8 @@
 .viewport-container {
     display: flex;
     width: 100%;
+    height: 70vh;
+    overflow-y: scroll;
 }
 
 .viewport-container ul{

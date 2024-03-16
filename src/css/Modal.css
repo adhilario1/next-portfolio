@@ -74,9 +74,9 @@
     max-height: 300px;
     width: auto;
     height: auto;
-    
+    border: 3px solid #111;
     margin: 5px;
-    border: 3px solid antiquewhite;
+   
     border-radius: 3px;
     background-color: #101010;
     cursor: pointer;
@@ -86,6 +86,7 @@
 }
 
 .open-modal:hover {
+    border: 3px solid antiquewhite;
     background-color: antiquewhite;
     color: #101010;
 }
@@ -101,19 +102,30 @@
    border: none;
 }
 
-.viewport-body img{
-    max-width: 560px;
-    max-height: 560px;
+.meta {
+    padding: 10px;
 }
 
-.viewport-body iframe {
-    max-width: 560px;
-    max-width: 316px;
+.mobile{
+    display: none;
 }
 
 
-@media only screen and (max-width:829px) {
+@media only screen and (min-width:686px) and (max-width:829px) {
+    .viewport-description {
+        overflow-y: scroll;
+        max-height: 30vh;
+        padding-right: 10px;
+        text-overflow: ellipsis;
+    }
+
+    .full {
+        font-size: medium;
+        font-size-adjust: 1vw;
+    }
+
     .open-modal img {
+
         height: 240px;
         width: 240px;
     }
@@ -122,8 +134,47 @@
         height: 240px;
         width: 240px;
     }
+
+    .viewer {
+        position: fixed;
+        z-index: 100;
+        min-width: 0;
+        width: 90vw;
+        max-height: 99vh;
+        top:50vh;
+        left:50vw;
+        transform: translate(-50%, -50%);
+        margin-bottom: 5vh;
+        
+        display: block;
+        text-align: center;
+        justify-content: center ;
+        background-color: #111;
+        border: double #fff;
+        border-radius: 3px;
+        line-height: 1.4;
+        
+        overflow:-moz-hidden-unscrollable;
+    }
+
+    .viewport-body {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .viewport-body img{
+        display: block;
+        margin:auto;
+        height: 60vh;
+        width: 60vh;
+        max-height: 600px;
+        max-width: 600px;
+        margin: 10px;
+    }
 }
-@media only screen and (max-width: 989) and (min-width: 830) { 
+
+@media only screen and (max-width: 989px) and (min-width: 830px) { 
     .open-modal img {
         height: 300px;
         width: 300px;
@@ -132,6 +183,40 @@
     .open-modal .video {
         height: 300px;
         width: 300px;
+    }
+
+    .viewer {
+        position: fixed;
+        z-index: 100;
+        min-width: 0;
+        width: 90vw;
+        max-height: 99vh;
+        top:50vh;
+        left:50vw;
+        transform: translate(-50%, -50%);
+        margin-bottom: 5vh;
+        
+        display: block;
+        text-align: center;
+        justify-content: center ;
+        background-color: #111;
+        border: double #fff;
+        border-radius: 3px;
+        line-height: 1.4;
+        
+        overflow:-moz-hidden-unscrollable;
+    }
+
+    .viewport-body {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .viewport-body img{
+        max-width: 500px;
+        max-height: 500px;
+        margin: 10px;
     }
 }
 
@@ -146,36 +231,93 @@
         width: 240px;
     }
 
+    .viewer {
+        position: fixed;
+        z-index: 100;
+        min-width: 0;
+        width: 90vw;
+        max-height: 99vh;
+        top:50vh;
+        left:50vw;
+        transform: translate(-50%, -50%);
+        margin-bottom: 5vh;
+        
+        display: block;
+        text-align: center;
+        justify-content: center ;
+        background-color: #111;
+        border: double #fff;
+        border-radius: 3px;
+        line-height: 1.4;
+        
+        overflow:-moz-hidden-unscrollable;
+    }
+
+    .viewport-body {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .viewport-body img{
+        max-height: 95vh;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 1222px) {
+    .viewer {
+        position: fixed;
+        z-index: 100;
+        min-width: 0;
+        width: 90vw;
+        max-height: 99vh;
+        top:50vh;
+        left:50vw;
+        transform: translate(-50%, -50%);
+        margin-bottom: 5vh;
+        
+        display: block;
+        text-align: center;
+        justify-content: center ;
+        background-color: #111;
+        border: double #fff;
+        border-radius: 3px;
+        line-height: 1.4;
+        
+        overflow:-moz-hidden-unscrollable;
+    }
+    
+    .viewport-body {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .viewport-body img{
+        margin: 10px;
+        max-width: none;
+        max-height: 95vh;
+    }
+    
+    .viewport-body iframe {
+        max-width: 560px;
+        max-width: 316px;
+    }
     
 }
 
-.modal-content {
-    /*viewport*/
-    position: fixed;
-    z-index: 100;
-    top: 50vh; /*40%*/
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: #101010;
-    padding: 14px 28px;
-    border: double #fff;
-    border-radius: 3px;
-    width: 75vw;
-    height: 75vh;
-
-    /*contents*/
-    display: block;
-    overflow: hidden;
-}
-
 .subheader {text-align: center;}
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 686px) {
     .description {
         height: 100%;
         padding-top: 5px;
 
         text-overflow: ellipsis;
+    }
+
+    .full {
+        display: none;
     }
 
     .meta-data {
@@ -186,36 +328,14 @@
         text-align: left;
     }
 
-    .modal-content-fullscreen {
-        position: fixed;
-        z-index: 100;
-        min-width: 0;
-        width: 98vw;
-        height: 99vh;
-        top:0;
-        left:0;
-        transform: translate(0, 0);
-        margin-bottom: 5vh;
-        
+    .mobile {
         display: block;
-        text-align: center;
-        justify-content: center ;
-        background-color: #101010;
-        border: double #fff;
-        border-radius: 3px;
-        line-height: 1.4;
-
-        overflow:-moz-hidden-unscrollable;
     }
 
     .modal-content-fullscreen .secondary-label {
         margin: 10px 0;
     }
-    .viewer img{
-        display: block;
-        margin: 10px auto;
-        width: 70vw;
-    }
+    
 
     .viewer .video{
         display: block;
@@ -236,10 +356,15 @@
     }
 
     .open-modal img{
+        display: block;
+        max-width: 40vw;
+        max-height: 40vw;
         height:100%;
     }
 
     .open-modal iframe {
+        display: block;
+        max-width: 40vw;
         border: none;
         max-height: none;
         height: 100%;
@@ -254,7 +379,7 @@
         position: fixed;
         z-index: 100;
         min-width: 0;
-        width: 90vw;
+        width: 99vw;
         height: 99vh;
         top:0;
         left:0;
@@ -264,12 +389,21 @@
         display: block;
         text-align: center;
         justify-content: center ;
-        background-color: #101010;
+        background-color: #111;
         border: double #fff;
         border-radius: 3px;
         line-height: 1.4;
-
+        
         overflow:-moz-hidden-unscrollable;
+    }
+    
+    .viewer img{
+        display: block;
+        
+        width:99vw;
+        max-width: none;
+        max-height:none;
+        object-fit: scale-down;
     }
 }
 

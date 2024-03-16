@@ -87,18 +87,12 @@ const Gallery = ({breakpoint}: Props) => {
                         }
                     }
                 } else {
-                    if (a.year < b.year) {
+                    if (a.id < b.id) {
                         return -1;
-                    } else if (a.year > b.year) {
-                        return 1;
                     } else {
-                        if (a.title < b.title) return -1
-                        else if (a.title > b.title) return 1
-                        else {
-                            if (a.id < b.id ) return -1
-                            else return 1;
-                        }
+                        return 1;
                     }
+                    
                 }
             }
             
@@ -114,7 +108,7 @@ const Gallery = ({breakpoint}: Props) => {
             <div className='content'>
                 <div className='gallery'>
                     <div className='subheader'>
-                        <div className='text'>
+                        <div className='gallery-title'>
                             <h1>Gallery.</h1>
                             <h2>{filter}</h2>
                         </div>
@@ -122,12 +116,13 @@ const Gallery = ({breakpoint}: Props) => {
                         <select className='dropdown filter' value={filter} onChange={handleFilterChange}>
                             <option value={""}>All</option>
                             <option value={"3d-modelling"}>3D Modeling</option>
-                            <option value={"graphic-design"}>Graphic Design</option>
+                            <option value={"Graphic Design"}>Graphic Design</option>
                             <option value={"vid-prod"}>Video Production</option>
                             <option value={"web-dev"}>Web Dev</option>
                         </select>
+                        
                         <select className='dropdown sort' value={sortKey} onChange={handleSortChange}>
-                            <option value={""}>---</option>
+                            <option value={"none"}>---</option>
                             <option value={"year"}>Year</option>
                             <option value={"title"}>Title</option>
                             <option value={"type"}>Format</option>

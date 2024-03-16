@@ -38,7 +38,7 @@ const Home = () => {
                         <a href='/projects/gallery'>
                             <div className='text left'>
                                 <h2 className='tertiary-label-bold gold'>Gallery</h2>
-                                <p>Images and Videos of things I've made over the years</p>
+                                <p>Samples of things I've made over the years.<br/> It's not evrything and will be updated periodically</p>
                             </ div>
                             <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>

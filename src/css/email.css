@@ -10,6 +10,10 @@ input[type=submit] {
     font-size: large;
 }
 
+#subject-line{
+    width: 100%;
+}
+
 input[type=submit]:hover {
     background-color: #ff8b00;
     color: #111;
