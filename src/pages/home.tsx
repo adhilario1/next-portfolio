@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 //style
 import '@/css/Home.css'
 import '@/css/Header.css'
+import '@/css/App.css'
 
 import { BsArrowLeftCircle, BsArrowLeftCircleFill } from 'react-icons/bs';
 const Home = () => {
