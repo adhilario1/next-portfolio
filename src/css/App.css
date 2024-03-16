@@ -34,7 +34,7 @@
   z-index: -10;
   top: 0;
   left: 0;
-  background-color: blue/*#003153*/;
+  background-color: antiquewhite/*#003153*/;
 }
 
 @media only screen and (max-width: 685px) {
