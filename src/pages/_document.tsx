@@ -6,7 +6,7 @@ import Document, {
     DocumentContext,
     DocumentInitialProps,
   } from 'next/document'
-   
+import '@/css/App.css'
 
   class MyDocument extends Document {
     static async getInitialProps(
