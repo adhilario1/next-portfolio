@@ -28,7 +28,7 @@
 }
 
 .background {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position:fixed;
   z-index: -10;
@@ -37,6 +37,11 @@
   background-color: antiquewhite/*#003153*/;
 }
 
+@media only screen and (max-width: 685px) {
+  .background {
+    background-color: #111;
+  }
+}
 
 .content {
   display: flex;
