@@ -101,12 +101,19 @@ a {
 
 @media only screen and (max-width: 686px) {
     .link-grid {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        grid-template-columns: auto;
     }
 
     .link-grid a{
         flex-direction: row;
+        width:80vw;
+        justify-content: space-around;
+    }
+
+    .link-grid .text{
+        
+        width: 60%;
     }
     .home-label{
         display: block;
@@ -115,5 +122,8 @@ a {
         text-align: center;
         font-size: 50px;
         border-bottom: 5px dotted antiquewhite;
+    }
+    .left {
+        width: 50vw;
     }
 }
