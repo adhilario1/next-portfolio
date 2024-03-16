@@ -1,31 +1,15 @@
 /* eslint-disable */
 import React from "react";
-
-import '@/css/Navbar.css';
-//import { Link } from "react-router-dom";
 import  Link  from 'next/link'
 
-const NavBar = () => {
-    /*
-    const [stickyClass, setStickyClass] = useState('relative');
+import '@/css/Navbar.css';
 
-    useEffect(() => {
-        window.addEventListener('scroll', stickyBar);
-
-        return () => {
-            window.removeEventListener('scroll', stickyBar);
-        };
-    }, []);
-
-    const stickyBar = () => {
-        if (window !== undefined) {
-            let windowHeight = window.scrollY;
-            windowHeight > 500 ? setStickyClass('fixed top-0 left-0 z-50') : setStickyClass('relative');
-        }
-    }
-    */
+interface Props {
+    id?: string
+}
+const NavBar = ({id}: Props) => {
     return (
-        <div>
+        <div id={id}>
             <nav
                 className="navbar is-primary"
                 role="navigation"

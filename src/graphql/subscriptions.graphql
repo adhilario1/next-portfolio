@@ -1,0 +1,109 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateGames($filter: ModelSubscriptionGamesFilterInput) {
+  onCreateGames(filter: $filter) {
+    id
+    title
+    preview {
+      nextToken
+      __typename
+    }
+    description
+    tags
+    year
+    type
+    thumbnail_url
+    url
+    outbound_url
+    outbound_label
+    mobile
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateGames($filter: ModelSubscriptionGamesFilterInput) {
+  onUpdateGames(filter: $filter) {
+    id
+    title
+    preview {
+      nextToken
+      __typename
+    }
+    description
+    tags
+    year
+    type
+    thumbnail_url
+    url
+    outbound_url
+    outbound_label
+    mobile
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteGames($filter: ModelSubscriptionGamesFilterInput) {
+  onDeleteGames(filter: $filter) {
+    id
+    title
+    preview {
+      nextToken
+      __typename
+    }
+    description
+    tags
+    year
+    type
+    thumbnail_url
+    url
+    outbound_url
+    outbound_label
+    mobile
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateImage($filter: ModelSubscriptionImageFilterInput) {
+  onCreateImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateImage($filter: ModelSubscriptionImageFilterInput) {
+  onUpdateImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteImage($filter: ModelSubscriptionImageFilterInput) {
+  onDeleteImage(filter: $filter) {
+    id
+    url
+    gameID
+    type
+    description
+    createdAt
+    updatedAt
+    __typename
+  }
+}

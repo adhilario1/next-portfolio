@@ -81,8 +81,9 @@
 
 .start {
     display: block;
+    background-color: #111;
     margin: 0 auto;
-    width:80vw;
+    width:100vw;
     text-align: center;
     border-bottom: 1px solid #ff8b00;
     border-top: 1px solid #ff8b00;
