@@ -14,6 +14,7 @@ const Home = () => {
     
     return (
         <>
+        <div className='background' />
         <div className='header'>
             <div className="primary-label home-title">
                 <a href="/" ><h1 className='home-label'>Adam Hilario</h1></a>
