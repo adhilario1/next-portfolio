@@ -55,7 +55,7 @@ const Email = () => {
     */
 
     const handleSubmit = () => {
-        
+
     }
     return (
         <>
@@ -66,11 +66,11 @@ const Email = () => {
                     <h1 className='secondary-label'>contact me.</h1>
                     <form onSubmit={handleSubmit}>
                         <div className='top'>
-                            <div className='field'>
+                            <div className='field half'>
                                 <label htmlFor='name' >Name:</label>
                                 <input name="name" type="text" value={formData.name} onChange={handleInputChange}/><br/><br/>
                             </div>
-                            <div className='field'>
+                            <div className='field half'>
                                 <label htmlFor="email">Email:</label>
                                 <input name="email" type="email" value={formData.email} onChange={handleInputChange}/><br/><br/>
                             </div>

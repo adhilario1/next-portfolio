@@ -7,8 +7,6 @@ import { Post } from "@/scripts/Post";
 
 import '@/css/Modal.css'
 
-
-
 interface Props {
     className?: string;
     post?: Post;
@@ -91,7 +89,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                     <div>
                         {contentType(true, post?.type)}
                     </div>
-                    {mobile && (
+                    
                         <div className="meta-data">
                             <div>
                                 <h2 className="secondary-label">{post?.title}</h2>
@@ -103,7 +101,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                                 </p>
                             </div>
                         </div>
-                    )}
+                    
                     
                 </div>
             {modal && (

@@ -12,12 +12,13 @@ li {
     background-color: #111;
     color: antiquewhite;
     height: 80px;
+    width: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top:0;
-    right: 5%;
+    right: 0;
 }
 
 .sidebar-main {

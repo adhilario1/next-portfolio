@@ -37,8 +37,10 @@ import Document, {
             <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
           </Head>
           <body>
-            <Main />
-            <NextScript />
+            <div id='site-wrapper'>
+              <Main />
+              <NextScript />
+            </div>
           </body>
         </Html>
       )

@@ -67,6 +67,16 @@ const Home = () => {
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
                         </a>
+                        <a href='/projects/this-site'>      
+                            <div className='text left'>
+                                <h2 className='tertiary-label-bold gold'>Read About This Site</h2>
+                                <p>Read about how I made this website and what service are availed to keep it running.</p>
+                            </ div>
+                            <div className='arrow-empty'>
+                                <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
+                                <BsArrowLeftCircleFill  className='arrow' size={50}/>
+                            </div>
+                        </a>
                         <a href='/contact/email'>
                             
                             <div className='text right'>
@@ -79,17 +89,7 @@ const Home = () => {
                             </div>
                         </a>
 
-                        <a href='/projects/this-site'>
-                            
-                            <div className='text left'>
-                                <h2 className='tertiary-label-bold gold'>Read About This Site</h2>
-                                <p>Read about how I made this website and what service are availed to keep it running.</p>
-                            </ div>
-                            <div className='arrow-empty'>
-                                <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
-                                <BsArrowLeftCircleFill  className='arrow' size={50}/>
-                            </div>
-                        </a>
+                        
                         <div/>
                         <div/>
                     </div>

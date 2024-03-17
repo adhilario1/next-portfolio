@@ -104,7 +104,6 @@ const Gallery = ({breakpoint}: Props) => {
         <>
         <Header />   
         <Body>
-                 
             <div className='content'>
                 <div className='gallery'>
                     <div className='subheader'>
