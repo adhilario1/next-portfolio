@@ -20,6 +20,19 @@ input[type=submit]:hover {
     border: 3px solid #ff8b00;
 }
 
+.confirmation {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.confirmation img{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 30vw;
+}
+
 .contact-form {
     display: flex;
     width: 100%;
@@ -73,4 +86,10 @@ input[type=submit]:hover {
     display: flex;
     justify-content: space-between;
     
+}
+
+@media screen and (max-width: 686px) {
+    .confirmation img {
+        width: 50vw;
+    }
 }
