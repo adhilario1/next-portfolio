@@ -39,6 +39,8 @@
     width: 100vw;
 }
 
+
+
 .title {
     font-size: calc(10px + 2vmin);
     text-align: center;
@@ -56,9 +58,30 @@
         padding: 1.5vh;
         font-size: medium;
         height: 7vh;
+        
     }
-    .mobile-nav {
+
+    .header .container {
         display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-nav {
+        position: absolute;
+        right:0;
+        top:0;
+        display: block;
+        flex-direction: row;
+        height: fit-content;
+        
+        border-radius: 5px;
+    }
+
+    .mobile-sticky {
+        position: fixed;
+        z-index: 101;
+        border-bottom:3px solid #ff8b00;
+        border-left: 3px solid #ff8b00;
     }
 
     .desktop-nav {

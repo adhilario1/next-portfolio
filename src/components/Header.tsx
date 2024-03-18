@@ -7,27 +7,38 @@ import NavBar from "./NavBar";
 
 import '@/css/Header.css'
 
+const breakpoint = 685; 
+
 const Header = () => {
+    const [width, setWidth] = useState(breakpoint)
     const [scroll, setScroll] = useState(false);
     const [navElem, setNavElem] = useState<HTMLElement | null>()
 
     useEffect(() => {
+        setWidth(window.innerWidth);
         setNavElem(document.getElementById('title'))
         window.addEventListener("scroll", () => {
-            if (navElem) {
-                setScroll(window.scrollY > navElem?.clientHeight);
+            if (width > breakpoint) {
+                if (navElem) {
+                    setScroll(window.scrollY > navElem?.clientHeight);
+                } else {
+                    setScroll(window.scrollY > 61.5);
+                }
             } else {
-                setScroll(window.scrollY > 61.5)
+                if (navElem) {
+                    setScroll(window.scrollY >= 215);
+                }
             }
+            
         });
     });
     return (
         <div className='header'>
             <div className='container'>
                 <div id="title" className="title primary-label">
-                <a href="/" ><h1>Adam Hilario</h1></a>
+                    <a href="/" ><h1>Adam Hilario</h1></a>
                 </div>
-                <div className="mobile-nav">
+                <div className={`mobile-nav ${scroll? "mobile-sticky" : ""}`}>
                     <SideBar />
                 </div>
                 <div id='pin' className={`desktop-nav ${scroll? "sticky" : ""}`} >

@@ -1,5 +1,6 @@
 *::-webkit-scrollbar {
     display: none;
+    display:block;
   }
   
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -40,6 +41,7 @@
     margin-bottom: 15px;
     border-bottom: 2px dotted #333;
  }
+
 .modal-container img {
     max-width: 75%;
     height: auto;
@@ -55,7 +57,7 @@
     
     position: fixed;
     z-index: 100;
-    max-width: 100vw;
+    
     
 }
 
@@ -78,7 +80,7 @@
     margin: 5px;
    
     border-radius: 3px;
-    background-color: #101010;
+    background-color: #111;
     cursor: pointer;
 
     object-fit:fill;
@@ -88,7 +90,7 @@
 .open-modal:hover {
     border: 3px solid antiquewhite;
     background-color: antiquewhite;
-    color: #101010;
+    color: #111;
 }
 
 .open-modal img{
@@ -108,6 +110,10 @@
 
 .mobile{
     display: none;
+}
+
+.viewer-head {
+    display: flex;
 }
 
 
@@ -139,7 +145,7 @@
         position: fixed;
         z-index: 100;
         min-width: 0;
-        width: 90vw;
+        width: 99vw;
         max-height: 99vh;
         top:50vh;
         left:50vw;
@@ -309,13 +315,22 @@
 
 .subheader {text-align: center;}
 @media only screen and (max-width: 686px) {
-    .description {
+    .close-modal {
+        position: absolute;
+        top:0;
+        right: 0;
+        padding: 0;
+        margin-right: 10px;
+        margin-top:5px;
+    }
+
+    .description{
         height: 100%;
         padding-top: 5px;
         display: block;
         overflow-x: hidden;
-        text-overflow: ellipsis;
         max-height: 40vw;
+        overflow-y: hidden;
     }
 
     .full {
@@ -334,6 +349,7 @@
 
     .mobile {
         display: block;
+        padding: 5px;
     }
 
     .modal-content-fullscreen .secondary-label {
@@ -355,7 +371,7 @@
         min-height: none;
         max-width: none;
         width:100%;
-        height:fit-content;
+        height:240px;
         border:none;
         
     }
@@ -366,7 +382,7 @@
         width: 240px;
         max-width: 40vw;
         max-height: 40vw;
-        height:100%;
+        
     }
 
     .open-modal iframe {
@@ -374,7 +390,7 @@
         max-width: 40vw;
         border: none;
         max-height: none;
-        height: 100%;
+        height: 240px;
     }
 
     .secondary-label {
@@ -386,28 +402,27 @@
         position: fixed;
         z-index: 100;
         min-width: 0;
-        width: 99vw;
-        height: 99vh;
-        top:0;
-        left:0;
-        transform: translate(0, 0);
-        margin-bottom: 5vh;
+        width: 100vw;
+        height: 100vh;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: none;
         
         display: block;
-        text-align: center;
+        text-align: left;
         justify-content: center ;
         background-color: #111;
         border: double #fff;
         border-radius: 3px;
         line-height: 1.4;
         
-        overflow:-moz-hidden-unscrollable;
     }
     
     .viewer img{
         display: block;
         
-        width:99vw;
+        width:100%;
         max-width: none;
         max-height:none;
         object-fit: scale-down;

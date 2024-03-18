@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    background-color: #101010;
+    background-color: #111;
     color: antiquewhite/*#ffbf00*/;
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
@@ -9,7 +9,7 @@
     position:static;
     z-index: 0;
     border: none;
-    margin-top: -1vh;
+    margin-top: 10px;
 }
 
 .label {

@@ -6,6 +6,7 @@ import { Game } from "@/scripts/GameModel";
 import { Post } from "@/scripts/Post";
 
 import '@/css/Modal.css'
+import { BiX, BiXCircle } from "react-icons/bi";
 
 interface Props {
     className?: string;
@@ -108,10 +109,13 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
                 <div className="modal-container">
                     <div onClick={toggleModal} className="overlay" />
                     <div className={`viewer`}>
-                        <button className="close-modal" onClick={toggleModal}>[X]</button>
-                        <div className="mobile secondary-label">
-                            <h2>{post?.title}</h2>
+                        <div className="viewer-head">
+                            <div className="mobile secondary-label">
+                                <h2>{post?.title}</h2>
+                            </div>
+                            <button className="close-modal" onClick={toggleModal}><BiXCircle size={30} /></button>
                         </div>
+                        
                         
                         <div className="viewport-body">
                             {contentType(false, post?.type)}
