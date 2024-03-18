@@ -4,12 +4,11 @@
     color: antiquewhite/*#ffbf00*/;
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
-    border-top: 3px double #ff8b00;
+   
 
     position:static;
     z-index: 0;
-    border: none;
-    margin-top: 10px;
+
 }
 
 .label {

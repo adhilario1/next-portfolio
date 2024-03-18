@@ -81,8 +81,6 @@ export default async function Page({ params }: { params: { id: string } }) {
               ))*/}
               </div>
             )}
-            
-            
             <div className='description'>
               {game.description}
             </div>
@@ -91,13 +89,13 @@ export default async function Page({ params }: { params: { id: string } }) {
               {(game?.outbound_url !== undefined || game?.outbound_url !== "") && (
                 <div className='outbound'> 
                   <h2 className='tertiary-label-bold'>Play Me!</h2>
-                  
-                  <iframe  src={game.url} width="552" height="167">
-                  {(game.outbound_url) && (
-                    <a href={game.outbound_url}>{game.outbound_label}</a>
-                  )}
-                  </iframe>
-                  
+                  <div className='widget-wrapper'>
+                    <iframe  src={game.url} width="552" height="167">
+                      {(game.outbound_url) && (
+                        <a href={game.outbound_url}>{game.outbound_label}</a>
+                      )}
+                    </iframe>
+                  </div>
                 </div>
               )}
             </div>

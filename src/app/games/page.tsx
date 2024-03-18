@@ -108,20 +108,17 @@ export default async function Games() {
             <Header />
             <div className="background" />
             <Body>
-                
                     <div className="content games">
                         <div className="page-title">
                             <h1 className="secondary-label">Games</h1>
                             <p>A playable repository for some of the games I've made. It isn't all of them, just the ones that were light enough to play in a browser</p>
                         </div>
-
                         <div className="viewport-container">
                             {/* 
                             <form action={createGameEntry}>
                                 <button type="submit">Add</button>
                             </form>
-                            */}
-                            
+                            */}  
                             {(!games|| games.length === 0 || errors) && (
                                 <div>
                                     <p>Oops! No games here!</p>
@@ -142,9 +139,7 @@ export default async function Games() {
                                                 </div>
                                                 <div className="game-metadata">
                                                     <h3 className="teriary-label-bold">{game.title}</h3>
-                                                    
                                                 </div>
-                                                
                                             </ div>
                                         </GameWidget>
                                     </li>

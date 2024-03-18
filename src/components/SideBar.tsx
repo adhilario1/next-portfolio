@@ -40,12 +40,12 @@ const SideBar = () => {
     }
     console.log(sideBar);
     return (
-        <>
-        <div className="open-side">
-            <Link href="#" className="menu-bars"onClick={toggleSideBar} >
+        <>    
+        <Link href="#" className="menu-bars"onClick={toggleSideBar} >
+            <div className="open-side">
                 <FaIcons.FaBars onClick={toggleSideBar} />
-            </Link>
-        </div>
+            </div>
+        </Link>
         {sideBar && (
             <nav className="sidebar-main">
             <ul className="" onClick={toggleSideBar}>

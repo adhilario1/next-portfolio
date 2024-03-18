@@ -22,7 +22,7 @@ li {
 .sidebar-main {
     background-color: #111;
     width: 250px;
-    height:100vh;
+    height:200vh;
     display: flex;
     justify-content: center;
     position:fixed;
@@ -36,6 +36,9 @@ li {
     /*transition:350ms;*/
 }
 
+.side-item {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .side-item a{
     display: flex;
     justify-content: start;
@@ -55,6 +58,7 @@ li {
 .list-item Link{
     text-decoration: none;
     color: antiquewhite;
+    
     font-size: 18px;
     width:95%;
     height:100%;

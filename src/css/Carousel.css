@@ -5,9 +5,10 @@
 #carousel{
     display: flex;
     flex-direction: row;
+    margin: auto;
     overflow-x: scroll;
-    justify-content: center;
     
+    width: 60vw;
 }
 
 #carousel-butts {
@@ -65,7 +66,7 @@
     object-fit: scale-down;
 }
 .clickable {
-    width: auto;
+    min-width: 100px;
     height:100px;
     max-width: 150px;
     cursor: pointer;
@@ -73,6 +74,7 @@
     position: relative;
     object-fit: cover;
     overflow: hidden;
+    background-color: aqua;
 }
 
 .clickable .cover {
@@ -112,7 +114,7 @@
 }
 
 .clickable img {
-    width: auto;
+    min-width: 100px;
     height: 100px;
     object-fit: fill;
     overflow: hidden;
