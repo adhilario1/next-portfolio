@@ -23,7 +23,7 @@ const About = () => {
                     <p>
                         As suggested by the title of this website, I am Adam Hilario.
                         <br />
-                        the purpose of this website is to serve as a portfolio/portal to put things i&apos;ve made or document what i have done.
+                        The purpose of this website is to serve as a portfolio/portal to put things I&apos;ve made or document what i have done.
                     </p>
                 </div>
                 <h2 className="secondary-label">
@@ -36,9 +36,9 @@ const About = () => {
                     <p>
                         In the autumn after graduating high school, I matriculated at the McGill University in Montreal, Quebec, CA 
                         where I began pursuit of a Bachelor of Arts with a major in Software Engineering and a double minor in World 
-                        Cinemaas and Psychology. However, after the spring semester of my second year, I transferred to University College Dublin.
+                        Cinemas and Psychology. However, after the spring semester of my second year, I transferred to University College Dublin.
                         <br/><br/>
-                        And while I did technically acquire enough credits in my Film and psychology minor to warrant the accolade
+                        And while I did technically acquire enough credits in my Film and Psychology minor to warrant the accolade
                         (the Software Emgineering courses were seriously impacted), they don't exactly hand out a diploma for just two minors
                         So the only sort of qualifucations I walked away from McGill with was an Ordination from the Univeral Life Church that I signed
                         up for on a whim. So technically I am a minister and can officiate weddings. (See the link to the contact form below.)
@@ -53,14 +53,13 @@ const About = () => {
                     </p>
                     <h4 className="secondary-label">Final Project</h4>
                     <p>
-                        For my Bachelor's Project, I used Microsoft's HoloLens and Unity to aid in the development of an anotation software 
-                        called MAAP Annotate started by my supervisor at the time. The aim of the software was to be able to annotate megalithic art in a virtual
+                        For my Bachelor's Project, I used Microsoft's HoloLens and Unity to aid in the development of an annotation software 
+                        called MAAP Annotate started by my supervisor at the time. The aim of the software was facilitate the annotation of megalithic art in a virtual
                         space using mixed reality. 
                         <br/><br/>
-                        While not initially planned, my contribution ended up being
-                        the porting of the software from HoloLens to the HoloLens 2 (which was way more evolved than I had predicted. On the backend, the only 
+                        While not initially planned, my contribution entailed porting the software from the first HoloLens to the HoloLens 2 (which was way more evolved than I had predicted. On the backend, the only 
                         thing the two versions of the HoloLens have in common are the name ) and added 
-                        functionaliy to enable sharing of Annotations through Azure blob storage.
+                        functionaliy to enable sharing of annotation data through Azure blob storage.
                         <br /><br/>
                         Embedded below is the write that accompanied the submission:
                     </p>
@@ -75,9 +74,9 @@ const About = () => {
                     </h2>
                     <h4><i>M.Sc Interactive Digital Media</i></h4>
                     <p>
-                        The Interactive Digital Media Master's is a three trimester taught programm by Trinity's School of Computer Science 
+                        The Interactive Digital Media Master's is a three trimester taught program by Trinity's School of Computer Science 
                         that was designed to be an interdisciplinary course that combined a variety of STEAM fields into a single degree.
-                        In practice, the skills acquired from this programme are well suited for game and full stack development with modules 
+                        In practice, the skills acquired from this program are well suited for game and full stack development with modules 
                         such as Graphic Design and Film abedding the design philosophy of a UI/UX or the narrative structure of games respectively. 
                         Other modules included 3D Modelling, Cultural Studies, Game Design, Web Development, and Programming.
                         <br/><br/>
@@ -85,7 +84,7 @@ const About = () => {
                     <h4 className="secondary-label">Final Project</h4>
                     <p>
                         
-                        The final trimester of the programme was dedicated to an independent project. My team and I decided to make a game developed with Unity and C#
+                        The final trimester of the program was dedicated to an independent project. My team and I decided to make a game developed with Unity and C#
                         <br/><br/>
                         Below are some images and the final slideshow from the presentation of our game.
                     </p>
