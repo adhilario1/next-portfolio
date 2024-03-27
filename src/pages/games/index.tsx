@@ -1,5 +1,4 @@
 
-
 //React Libraries
 import React, { useState } from "react";
 
@@ -13,26 +12,26 @@ import Footer from "@/components/Footer";
 import '@/css/Arcade.css';
 
 //aws amplify 
-import { generateServerClientUsingCookies } from '@aws-amplify/adapter-nextjs/api';
-import { cookies } from 'next/headers';
-
-//import {revalidatePath} from 'next/cache'
-//import * as mutations from '@/graphql/mutations';
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { Games } from "@/API";
+import { runWithAmplifyServerContext, reqResBasedClient } from "@/utils/amplifyServerUtils";
 import * as queries from '@/graphql/queries';
-import config from '@/amplifyconfiguration.json';
 
-const cookiesClient = generateServerClientUsingCookies({
-  config,
-  cookies
-});
+
+type ResponseData = {
+  games: Games[]
+}
 
 //data
 //import { CreateGamesInput } from "@/API";
 
-//import local_games from '@/assets/data/games.json'
-//import { Game } from "@/scripts/GameModel";
-//import { title } from "process";
+/*
+import local_games from '@/assets/data/games.json'
 import GameWidget from "@/components/GameWidget";
+import { Games } from "@/API";
+import useSWR from "swr";
+import { list } from "aws-amplify/storage";
+*/
 
 /*
 async function createGameEntry(formData: FormData) {
@@ -78,31 +77,16 @@ async function createGameEntry(formData: FormData) {
 
 }
 */
+
+
+
 export default async function Games() {
-    const { data, errors } = await cookiesClient.graphql({
-        query: queries.listGames
-    });
-
+   
+    return (<>bitch</>)
     
-    const games = data.listGames.items
+    
+    
     /*
-    const [filter, setFilter] = useState('');
-    const [filteredData, setFilteredData] = useState(local_games);
-
-    const handleFilterChange = (event: React.FormEvent<HTMLSelectElement>) => {
-        event.preventDefault();
-        var safeSearchTypeValue: string = event.currentTarget.value;
-        setFilter(safeSearchTypeValue);
-        filterData(safeSearchTypeValue);
-    };
-
-    const filterData = (filter: string) => {
-        const filteredData = local_games.filter((item) => 
-            item.discipline.toLowerCase().includes(filter.toLowerCase())
-        );
-        setFilteredData(filteredData);
-    };
-    */
     return (
         <>
             <Header />
@@ -118,14 +102,14 @@ export default async function Games() {
                             <form action={createGameEntry}>
                                 <button type="submit">Add</button>
                             </form>
-                            */}  
+                            *//*}  
                             {(!games|| games.length === 0 || errors) && (
                                 <div>
                                     <p>Oops! No games here!</p>
                                 </div>
                             )} 
                             <ul className="game-list">
-                                {/*<li style={{ listStyle: 'none' }}>{game.id} | {game.title}</li> */}
+                                
                                 {games.map((game) => {
                                 return (
                                     <li className="game-list-item">
@@ -152,4 +136,5 @@ export default async function Games() {
             <Footer />
         </>
     )
+    */
 };

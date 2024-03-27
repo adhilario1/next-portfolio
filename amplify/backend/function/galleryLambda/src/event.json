@@ -1,7 +1,0 @@
-{
-  "httpMethod": "GET",
-  "path": "/gallery",
-  "queryStringParameters": {
-    "limit": "10"
-  }
-}

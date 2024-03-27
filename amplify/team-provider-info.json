@@ -17,23 +17,13 @@
         "nextportfolio": {}
       },
       "api": {
-        "nextportfolio": {},
-        "galleryAPI": {}
+        "nextportfolio": {}
       },
       "hosting": {
         "amplifyhosting": {
           "appId": "d1tqlij6oidc9c",
           "type": "cicd"
         }
-      },
-      "function": {
-        "galleryLambda": {
-          "deploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
-          "s3Key": "amplify-builds/galleryLambda-4775495334312b786d41-build.zip"
-        }
-      },
-      "storage": {
-        "galleryDB": {}
       }
     }
   }

@@ -145,8 +145,6 @@ export default function Gallery({breakpoint}: Props) {
     
     //fetch remote data
     const [remoteDataFlag, setRemoteDataFlag] = useState(false);
-
-    
     const { data } = useSWR('/gallery', getRemoteGalleryData);
 
     if (!data) {

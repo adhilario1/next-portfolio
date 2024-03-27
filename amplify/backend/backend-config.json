@@ -1,19 +1,5 @@
 {
   "api": {
-    "galleryAPI": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "galleryLambda"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
     "nextportfolio": {
       "dependsOn": [],
       "output": {
@@ -57,27 +43,7 @@
       "serviceType": "managed"
     }
   },
-  "function": {
-    "galleryLambda": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributeEnvMap": {
-            "Arn": "TABLE_ARN",
-            "Name": "TABLE_NAME"
-          },
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "storage",
-          "resourceName": "galleryDB"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
+  "function": {},
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2024-03-14T03:53:51.301Z",
@@ -86,22 +52,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_galleryLambda_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "galleryLambda"
-        }
-      ]
-    },
-    "AMPLIFY_function_galleryLambda_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "galleryLambda"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -119,10 +69,5 @@
       ]
     }
   },
-  "storage": {
-    "galleryDB": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
-    }
-  }
+  "storage": {}
 }

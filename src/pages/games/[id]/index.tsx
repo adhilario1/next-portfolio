@@ -1,5 +1,4 @@
-import { generateServerClientUsingCookies } from '@aws-amplify/adapter-nextjs/api';
-import { cookies } from 'next/headers';
+
 
 //import {revalidatePath} from 'next/cache'
 
@@ -17,10 +16,6 @@ import '@/css/GamePage.css'
 
 
 
-const cookiesClient = generateServerClientUsingCookies({
-  config,
-  cookies
-});
 
 export default async function Page({ params }: { params: { id: string } }) {
   /*
