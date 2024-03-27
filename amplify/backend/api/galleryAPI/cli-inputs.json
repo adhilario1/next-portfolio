@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "/gallery": {
+      "name": "/gallery",
+      "lambdaFunction": "galleryLambda",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "read"
+        ]
+      }
+    }
+  }
+}

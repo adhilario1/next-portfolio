@@ -4,20 +4,63 @@ import Body from '@/components/Body';
 import Footer from '@/components/Footer';
 import Modal from '@/components/Modal';
 
+//AWS 
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from '@/amplifyconfiguration.json';
+import { ApiError, get } from 'aws-amplify/api'
+Amplify.configure(amplifyconfig);
+
 //css
 import '@/css/Gallery.css'
 
 //data 
-import posts from '@/assets/data/posts.json'
+import local_posts from '@/assets/data/posts.json'
+import { Post } from '@/scripts/Post';
+import useSWR from 'swr';
 
 interface Props {
     breakpoint?: number;
 }
 
-const Gallery = ({breakpoint}: Props) => {
+
+async function getRemoteGalleryData() {
+    try {
+        const restOperation = get({
+            apiName: 'galleryAPI',
+            path: '/gallery',
+        });
+        const response = await restOperation.response;
+        //const { body } = await restOperation.response;
+        //const response = await body.json();
+
+        const response_string = await response.body.text();
+        
+        console.log('GET call succeeded');
+
+        return response_string;
+    } catch (error) {
+        if (error instanceof ApiError) {
+            if (error.response) {
+                const {
+                    statusCode,
+                    headers,
+                    body
+                } = error.response;
+                console.error(`Received ${statusCode} error response with payload: ${body}`);
+            }
+            return error;
+        }
+        
+    } 
+}
+
+export default function Gallery({breakpoint}: Props) {
+
     const [sortKey, setSortKey] = useState('');
     const [filter, setFilter] = useState('');
-    const [filteredData, setFilteredData] = useState(posts);
+    
+    const postData: Array<Post> = local_posts;
+    const [filteredData, setFilteredData] = useState(postData);
 
     const handleFilterChange = (event: React.FormEvent<HTMLSelectElement>) => {
         event.preventDefault();
@@ -27,7 +70,7 @@ const Gallery = ({breakpoint}: Props) => {
     };
 
     const filterData = (filter: string) => {
-        const filteredData = posts.filter((item) => 
+        const filteredData = postData.filter((item) => 
             item.discipline?.toLowerCase().includes(filter.toLowerCase())
         );
         setFilteredData(filteredData);
@@ -41,7 +84,7 @@ const Gallery = ({breakpoint}: Props) => {
     }
 
     const sortData = (sort: string) => {
-        const sortedData = posts.sort((a, b) =>
+        const sortedData = local_posts.sort((a, b) =>
             {
                 if (sort==="title") {
                     if (a.title < b.title) {
@@ -73,7 +116,7 @@ const Gallery = ({breakpoint}: Props) => {
                             }
                         }
                     }
-                } else if (sort==="type") {
+                } else if (sort==="year") {
                     if (a.year < b.year) {
                         return -1;
                     } else if (a.year > b.year) {
@@ -99,6 +142,86 @@ const Gallery = ({breakpoint}: Props) => {
         );
         setFilteredData(sortedData);
     };
+    
+    //fetch remote data
+    const [remoteDataFlag, setRemoteDataFlag] = useState(false);
+
+    
+    const { data } = useSWR('/gallery', getRemoteGalleryData);
+
+    if (!data) {
+        return (
+            <>
+            <Header />
+            <Body>
+                <div className='content'>
+            	    <p>Fetching gallery posts from database...</p>
+                </div>
+            </Body>
+            </>
+        )
+    }
+
+    if (data instanceof ApiError) {
+        return (
+            <>
+            <Header />   
+            <Body>
+                <div className='content'>
+                    <div className='gallery'>
+                        <div className='subheader'>
+                            <div className='gallery-title'>
+                                <h1>Gallery.</h1>
+                                <h2>{filter}</h2>
+                            </div>
+                            <div className='spacer' />
+                            <select className='dropdown filter' value={filter} onChange={handleFilterChange}>
+                                <option value={""}>All</option>
+                                <option value={"3d-modelling"}>3D Modeling</option>
+                                <option value={"Graphic Design"}>Graphic Design</option>
+                                <option value={"vid-prod"}>Video Production</option>
+                                <option value={"web-dev"}>Web Dev</option>
+                            </select>
+                            
+                            <select className='dropdown sort' value={sortKey} onChange={handleSortChange}>
+                                <option value={"none"}>---</option>
+                                <option value={"year"}>Year</option>
+                                <option value={"title"}>Title</option>
+                                <option value={"type"}>Format</option>
+                                <option value={"discipline"}>Discipline</option>
+                            </select>
+                        </div>
+                        <div className='error-container'>
+                            <p>Unable to fetch remote data! Showing local data only...</p>
+                            
+                        </div>
+                        <div className='viewport-container'>
+                            <div className='spacer' />
+                            <ul>
+                                {filteredData.map((item) => (
+                                    <>
+                                    <li key={item.id}>
+                                        <Modal className="Modal" post={item} breakpoint={breakpoint} />
+                                    </li>
+                                    </>
+                                ))}
+                            </ul>
+                            <div className='spacer' />
+                        </div>
+                    </div>
+                </div>    
+            </ Body>
+            <Footer />
+            </>
+        )
+    }  else if (!remoteDataFlag) {
+        const remote_data: Array<Post> = JSON.parse(data);
+        console.log('pushing remote');
+        postData.push(...remote_data);
+        setRemoteDataFlag(true);
+    }
+    
+    
 
     return (
         <>
@@ -112,15 +235,16 @@ const Gallery = ({breakpoint}: Props) => {
                             <h2>{filter}</h2>
                         </div>
                         <div className='spacer' />
-                        <select className='dropdown filter' value={filter} onChange={handleFilterChange}>
+                        <label htmlFor='filter'>Filter</label>
+                        <select id='filter' className='dropdown filter' value={filter} onChange={handleFilterChange}>
                             <option value={""}>All</option>
                             <option value={"3d-modelling"}>3D Modeling</option>
                             <option value={"Graphic Design"}>Graphic Design</option>
                             <option value={"vid-prod"}>Video Production</option>
                             <option value={"web-dev"}>Web Dev</option>
                         </select>
-                        
-                        <select className='dropdown sort' value={sortKey} onChange={handleSortChange}>
+                        <label htmlFor='sort'>Sort</label>
+                        <select id='sort' className='dropdown sort' value={sortKey} onChange={handleSortChange}>
                             <option value={"none"}>---</option>
                             <option value={"year"}>Year</option>
                             <option value={"title"}>Title</option>
@@ -128,7 +252,10 @@ const Gallery = ({breakpoint}: Props) => {
                             <option value={"discipline"}>Discipline</option>
                         </select>
                     </div>
-                    
+                    <div className='error-container'>
+                        <p>test</p>
+                        
+                    </div>
                     <div className='viewport-container'>
                         <div className='spacer' />
                         <ul>
@@ -151,4 +278,3 @@ const Gallery = ({breakpoint}: Props) => {
     )
 };
 
-export default Gallery;
