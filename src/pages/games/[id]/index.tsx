@@ -3,12 +3,9 @@ import { useRouter } from 'next/router';
 
 import useSWR from 'swr';
 
-import * as custom_queries from '@/graphql/customQueries'
-import config from '@/amplifyconfiguration.json';
-import Header from '@/components/Header';
-import Body from '@/components/Body';
+
 import Footer from '@/components/Footer';
-import ImageCarousel from '@/components/ImageCarousel';
+
 import { BsArrowLeftCircle } from 'react-icons/bs';
 
 //style
@@ -19,7 +16,7 @@ import { ApiError, get } from 'aws-amplify/api';
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from '@/amplifyconfiguration.json';
 
-import GameWidget from "@/components/GameWidget";
+//import GameWidget from "@/components/GameWidget";
 import { Game } from '@/scripts/GameModel';
 Amplify.configure(amplifyconfig);
 

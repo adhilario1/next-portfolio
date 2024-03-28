@@ -14,29 +14,17 @@ interface Props {
 }
 
 function ImageCarousel({name, className, images} : Props) {
+    console.log(name, className, images)
+
+    return (
+        <>
+        <p>place holder</p>
+        </>
+    )
+    /*
     const [displayImage, setDisplay] = useState(images?.at(0));
     const [index, setIndex] = useState(0);
     const [currImgElem, setCurrElement] = useState<HTMLElement>();
-    
-    /*
-    
-    const [prevIndex, setPrevIndex] = useState(1);
-    
-    const [displayImageType, setDisplayType] = useState("image");
-    
-    
-    
-    useEffect(() => {
-        if (index!=prevIndex) {
-            let currIFrame = document.getElementById('carousel')?.children[index].lastChild
-            if (typeof currIFrame === HTMLIFrameElement.toString()) {
-                selectImg(currIFrame as HTMLIFrameElement)
-                setPrevImage(currIFrame as HTMLIFrameElement)
-                setPrevIndex(index)
-            }
-        }   
-    }, []);
-    */
     
     
     
@@ -51,23 +39,11 @@ function ImageCarousel({name, className, images} : Props) {
         setDisplay(currentImage);
         currentTarget.classList.add("selected");
         setCurrElement(currentTarget);
-        
-        //setCurrImage(currentTarget);
-        /*
-        if (prevImage) {
-            prevImage.className.replace("selected", "");
-        }
-        setPrevImage(currentTarget);
-        console.log("selected");
-        let t = indexOfImageByID(currentTarget.id);
-        setPrevIndex(t);
-        setIndex(t);
-        */
     }
     
     if (images instanceof String) {
         return (
-            
+            <></>
         )
     }
     return (
@@ -139,7 +115,7 @@ function ImageCarousel({name, className, images} : Props) {
             </div>
         </div>
     )
-    
+    */
 }
 
 export default ImageCarousel
