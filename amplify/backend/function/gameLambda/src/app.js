@@ -240,26 +240,6 @@ app.delete(path + '/object' + hashKeyPath + sortKeyPath, async function(req, res
   }
 });
 
-/*************
- * middleware
- * ***********/
-const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
-app.use(awsServerlessExpressMiddleware.eventContext());
-
-
-app.get('/items', function(req, res) {
-
-  const query = req.query;
-  // or
-  // const query = req.apiGateway.event.queryStringParameters
-  res.json({
-    event: req.apiGateway.event, // to view all event data
-    query: query
-  });
-});
-/******************
- * END MIDDLEWARE *
- ******************/
 app.listen(3000, function() {
   console.log("App started")
 });

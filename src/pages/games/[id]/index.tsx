@@ -23,7 +23,6 @@ Amplify.configure(amplifyconfig);
 async function getSingleGameData(url: string) {
   try {
     const restOperation = get({
-
       apiName: 'portfolioAPI',
       path: url,
     });

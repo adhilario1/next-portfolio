@@ -1,25 +1,24 @@
-
-//React Libraries
-import React, { useState } from "react";
-
-//Components
+import React, { useState } from 'react';
 import Header from '@/components/Header';
-
-import Body from "@/components/Body";
-import Footer from "@/components/Footer";
-
-import {Game} from '@/scripts/GameModel'
-import local_games from '@/assets/data/games.json'
-//style
-import '@/css/Arcade.css';
+import Body from '@/components/Body';
+import Footer from '@/components/Footer';
+//import Modal from '@/components/Modal';
+import GameWidget from '@/components/GameWidget';
 
 //AWS 
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from '@/amplifyconfiguration.json';
 import { ApiError, get } from 'aws-amplify/api'
-import useSWR from "swr";
-import GameWidget from "@/components/GameWidget";
 Amplify.configure(amplifyconfig);
+
+//css
+import '@/css/Arcade.css'
+
+//data 
+import local_games from '@/assets/data/games.json'
+import { Game } from '@/scripts/GameModel';
+import useSWR from 'swr';
+
 
 
 
@@ -31,12 +30,9 @@ async function getRemoteGameData(url: string) {
             path: url,
         });
         const response = await restOperation.response;
-        //const { body } = await restOperation.response;
-        //const response = await body.json();
-
         const response_string = await response.body.text();
         
-        console.log('GET call succeeded');
+        console.log('GET call succeeded: ', response.statusCode);
 
         return response_string;
     } catch (error) {
@@ -139,7 +135,7 @@ export default function Games() {
             <Header />
             <Body>
                 <div className='content'>
-            	    <p>Fetching gallery posts from database...</p>
+            	    <p>Fetching gallery games from database...</p>
                 </div>
             </Body>
             </>
@@ -147,7 +143,7 @@ export default function Games() {
     }
 
     if (data instanceof ApiError) {
-        setRemoteDataFlag(false);
+        
         return (
             <>
             <Header />   

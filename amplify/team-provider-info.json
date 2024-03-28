@@ -22,11 +22,11 @@
       "function": {
         "galleryLambda": {
           "deploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
-          "s3Key": "amplify-builds/galleryLambda-4e4d545946572b377542-build.zip"
+          "s3Key": "amplify-builds/galleryLambda-556a415170697671322f-build.zip"
         },
         "gameLambda": {
           "deploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
-          "s3Key": "amplify-builds/gameLambda-66496f433146542f596f-build.zip"
+          "s3Key": "amplify-builds/gameLambda-652f6d644374486f6c36-build.zip"
         }
       },
       "auth": {

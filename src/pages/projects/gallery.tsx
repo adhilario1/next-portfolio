@@ -35,7 +35,7 @@ async function getRemoteGalleryData() {
 
         const response_string = await response.body.text();
         
-        console.log('GET call succeeded');
+        console.log('GET call succeeded: ', response.statusCode);
 
         return response_string;
     } catch (error) {
@@ -251,7 +251,6 @@ export default function Gallery({breakpoint}: Props) {
                         </select>
                     </div>
                     <div className='error-container'>
-                        <p>test</p>
                         
                     </div>
                     <div className='viewport-container'>
