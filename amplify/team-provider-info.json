@@ -13,12 +13,6 @@
       "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-nextportfolio-dev-225729-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
-      "auth": {
-        "nextportfolio": {}
-      },
-      "api": {
-        "nextportfolio": {}
-      },
       "hosting": {
         "amplifyhosting": {
           "appId": "d1tqlij6oidc9c",
