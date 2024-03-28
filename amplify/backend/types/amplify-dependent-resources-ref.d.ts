@@ -1,10 +1,5 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "nextportfolio": {
-      "GraphQLAPIEndpointOutput": "string",
-      "GraphQLAPIIdOutput": "string",
-      "GraphQLAPIKeyOutput": "string"
-    },
     "portfolioAPI": {
       "ApiId": "string",
       "ApiName": "string",
@@ -30,7 +25,7 @@ export type AmplifyDependentResourcesAttributes = {
       "Name": "string",
       "Region": "string"
     },
-    "gamesLambda": {
+    "gameLambda": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
@@ -39,7 +34,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
-    "games": {
+    "galleryTable": {
       "Arn": "string",
       "Name": "string",
       "PartitionKeyName": "string",
@@ -49,7 +44,7 @@ export type AmplifyDependentResourcesAttributes = {
       "SortKeyType": "string",
       "StreamArn": "string"
     },
-    "portfolioDB": {
+    "gameTable": {
       "Arn": "string",
       "Name": "string",
       "PartitionKeyName": "string",

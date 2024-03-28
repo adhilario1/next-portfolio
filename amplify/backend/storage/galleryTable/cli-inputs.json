@@ -1,0 +1,14 @@
+{
+  "resourceName": "galleryTable",
+  "tableName": "gallery",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "url",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
-import { Image } from '@/API';
+import { Image as ImageModel} from '@/utils/models/Image';
 import '@/css/Carousel.css'
 
 
@@ -10,7 +10,7 @@ import '@/css/Carousel.css'
 interface Props {
     name?: string
     className?: string
-    images: Array<Image|null>
+    images: Array<ImageModel| string | null>
 }
 
 function ImageCarousel({name, className, images} : Props) {
@@ -65,7 +65,11 @@ function ImageCarousel({name, className, images} : Props) {
         */
     }
     
-    
+    if (images instanceof String) {
+        return (
+            
+        )
+    }
     return (
         <div className={`carousel ${className}`}>
             <div id="carousel-wrapper">

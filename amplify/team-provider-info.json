@@ -18,6 +18,26 @@
           "appId": "d1tqlij6oidc9c",
           "type": "cicd"
         }
+      },
+      "function": {
+        "galleryLambda": {
+          "deploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
+          "s3Key": "amplify-builds/galleryLambda-4e4d545946572b377542-build.zip"
+        },
+        "gameLambda": {
+          "deploymentBucketName": "amplify-nextportfolio-dev-225729-deployment",
+          "s3Key": "amplify-builds/gameLambda-66496f433146542f596f-build.zip"
+        }
+      },
+      "auth": {
+        "nextportfolio": {}
+      },
+      "api": {
+        "portfolioAPI": {}
+      },
+      "storage": {
+        "galleryTable": {},
+        "gameTable": {}
       }
     }
   }

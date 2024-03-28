@@ -11,5 +11,5 @@ export interface Game {
     outbound_url?: string,
     outbound_label?: string,
     mobile: boolean,
-    
+    playview?: string
 }

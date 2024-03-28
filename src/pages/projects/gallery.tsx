@@ -26,7 +26,7 @@ interface Props {
 async function getRemoteGalleryData() {
     try {
         const restOperation = get({
-            apiName: 'galleryAPI',
+            apiName: 'portfolioAPI',
             path: '/gallery',
         });
         const response = await restOperation.response;
