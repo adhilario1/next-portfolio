@@ -1,3 +1,11 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    background-color: #111;
+}
 #back-arrow {
     display: block;
     position: fixed;
@@ -16,8 +24,30 @@
 
 .game {
     flex-direction: column;
+    padding: 0;
+
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:normal;
+    font-style: normal;
 }
 
+.game-header {
+    margin: 15px 15px 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.game-header h2 {
+    font-size: xx-large;
+}
+
+.game-header h3 {
+    
+    font-size: x-large;
+}
 .game-link {
     display: block;
     margin: auto;
@@ -26,6 +56,42 @@
 .game-link iframe {
     color:antiquewhite;
 }
+
+.game-title {
+    margin: 0;
+    border:0;
+}
+
+.game-year {
+    margin: 0;
+    border:0;
+}
+
+.tags {
+    display: flex;
+    margin-left: 15px;
+    
+    text-indent: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: medium;
+    font-style: normal;
+}
+
+.tag{
+    margin: 0;
+    border:0;
+    height: fit-content;
+    text-decoration: none;
+    display: flex;   
+    
+}
+
+.tags a:not(:last-child)::after{
+    margin:0 10px;
+    content: '|';
+}
+
 
 .widget-wrapper {
     display:block;
@@ -37,5 +103,17 @@
 @media only screen and (max-width: 686px){
     #back-arrow {
         position: absolute;
+    }
+
+    .game {
+        padding: 0;
+    }
+
+    .game-header {
+        padding: 15px 15px 0;
+    }
+
+    .tags {
+        padding: 0 15px;
     }
 }

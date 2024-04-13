@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
-import { Image as ImageModel} from '@/utils/models/Image';
-import '@/css/Carousel.css'
+import  { Image as ImageModel}  from '@/utils/models/DataModels';
+import '@/css/ImageCarousel.css'
 
 
 

@@ -172,6 +172,9 @@ export default function Games() {
                         <div className='viewport-container'>
                             <div className='spacer' />
                             <ul>
+                                <li>
+                                    
+                                </li>
                                 {filteredData.map((item) => (
                                     <>
                                     <li key={item.id}>
@@ -220,7 +223,18 @@ export default function Games() {
                                 </div>
                             )} 
                             <ul className="game-list">
-                                
+                                <li className='game-list-item'>
+                                    <GameWidget game_id='summer-project'>
+                                        <div className="game-data">
+                                            <div className="game-thumbnail">
+                                                <img src='/assets/sidney/title.png' />
+                                            </div>
+                                            <div className="game-metadata">
+                                                <h3 className="teriary-label-bold">Master's Project | Sidney</h3>
+                                            </div>
+                                        </ div>
+                                    </GameWidget>
+                                </li>
                                 {gameData.map((game) => {
                                 return (
                                     <li className="game-list-item">

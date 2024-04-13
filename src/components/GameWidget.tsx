@@ -1,4 +1,6 @@
-import React, {  ReactElement } from 'react'
+import React, {  ReactElement } from 'react';
+
+import '@/css/GameWidget.css'
 //import dynamic from 'next/dynamic'
 
 /*

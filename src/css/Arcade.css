@@ -1,7 +1,10 @@
+
+
 .game-list-item {
     display: block;
     width:fit-content;
     height: fit-content;
+    margin: 10px;
 }
 
 .game-list-item:hover {
@@ -16,23 +19,43 @@
 }
 
 .game-list {
-    display: block;
-    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    
+    justify-content: center;
     border-top: 1px dotted #444;
     height: 60vh;
     width:100%;
     max-width: 1200px;
-    margin-top: 15px;
+    
     overflow-y: scroll;
     float: left;
+    
 }
+.game-list-item {
+    width:fit-content;
+    height: fit-content;
+    padding: 2% 0;
+    
+    
+}
+
+
 .game-thumbnail img{
-    width: 200px;
-    height: 200px;
+    width: 33vw;
+    height: 33vw;
+    float: left;
 }
 
 .game-metadata {
     display: none;
+}
+
+@media only screen and (max-width: 989px)  and (min-width: 686px){
+    .game-list {
+        grid-template-columns: auto auto;
+    }
 }
 
 @media only screen and (min-width: 686px) {
@@ -42,12 +65,20 @@
         max-width: 1200px;
     }
 
+    .game-list {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
     .game-thumbnail img{
         width: 300px;
         height: 300px;
     }
     .game-list-item {
-        height: 300px;
+        
+        border: none;
+        margin: 10px;
     }
 
     .game-metadata {
