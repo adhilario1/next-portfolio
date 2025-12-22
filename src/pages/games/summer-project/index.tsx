@@ -82,17 +82,24 @@ function SummerProject() {
                 <Carousel images={images} />
                 <div className='description'>
                   <p>
-                    &emsp;&emsp;As part of the Interactive Digital Media Program at Trinity College Dublin, 
+                    As part of the Interactive Digital Media Program at Trinity College Dublin, 
                     I, along with three other students were required to complete an independent project for the third trimester.
                     While, each member contributed to every step in the process, I was functionally the lead programmer and UI designer, 
                     as I had an undergraduate degree in computer science.
                     <br/><br/>
                     This was coded using Unity 2021 and C#. Assets were made in Blender and Adobe Photoshop. Link to <a href="https://gitlab.com/idm-summer-23-group-2/boats-n-ghosts/-/tree/dev-3?ref_type=heads">code</a> (Note: this is not necessarily code run to make the final game shown in the demonstration video. Some changes were made last minute and not pushed to github.)
                   </p>
+                  <div className="work-sample">
+                    <div className="slideshow-bob">
+                      <iframe src="./assets/pdf/Sidney.pdf" width="560" height="375"/>
+                      <p><b><i>Figure 2.1: Presentation Slideshow</i></b></p>
+                    </div>
+                    <div className="video">
+                      <iframe className="demo" src="https://www.youtube.com/embed/sbv0iAtByQs?si=FVUD_k374xEbp0oo"/>
+                      <p><b><i>Figure 2.2: Gameplay demo</i></b></p>
+                    </div>
+                  </div>
                 </div>
-                
-                
-    
               </div>
             )}
           </div>

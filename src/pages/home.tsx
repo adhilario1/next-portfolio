@@ -74,7 +74,7 @@ const Home = () => {
                             {*/}
                         </a>
                         <a href='/projects/this-site'>      
-                            <div className='text left'>
+                            <div className='text right'>
                                 <h2 className='tertiary-label-bold gold'>Read About This Site</h2>
                                 <p>Read about how I made this website and what service are availed to keep it running.</p>
                             </ div>
@@ -87,7 +87,7 @@ const Home = () => {
                         </a>
                         <a href='/contact/email'>
                             
-                            <div className='text right'>
+                            <div className='text left'>
                                 <h2 className='tertiary-label-bold gold'>Contact</h2>
                                 <p>Drop me an email!</p>
                             </ div>
