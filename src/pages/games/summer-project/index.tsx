@@ -9,6 +9,7 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 
 //style
 import '@/css/GamePage.css'
+import '@/css/About.css'
 import Carousel from '@/components/Carousel';
 import Body from '@/components/Body';
 
@@ -91,7 +92,7 @@ function SummerProject() {
                   </p>
                   <div className="work-sample">
                     <div className="slideshow-bob">
-                      <iframe src="./assets/pdf/Sidney.pdf" width="560" height="375"/>
+                      <iframe src="./../assets/pdf/Sidney.pdf" width="560" height="375"/>
                       <p><b><i>Figure 2.1: Presentation Slideshow</i></b></p>
                     </div>
                     <div className="video">
