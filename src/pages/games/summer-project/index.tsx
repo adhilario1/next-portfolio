@@ -87,7 +87,7 @@ function SummerProject() {
                     While, each member contributed to every step in the process, I was functionally the lead programmer and UI designer, 
                     as I had an undergraduate degree in computer science.
                     <br/><br/>
-                    This was coded using Unity 2021 and C#. Assets were made in Blender and Adobe Photoshop.
+                    This was coded using Unity 2021 and C#. Assets were made in Blender and Adobe Photoshop. Link to <a href="https://gitlab.com/idm-summer-23-group-2/boats-n-ghosts/-/tree/dev-3?ref_type=heads">code</a> (Note: this is not necessarily code run to make the final game shown in the demonstration video. Some changes were made last minute and not pushed to github.)
                   </p>
                 </div>
                 

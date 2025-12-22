@@ -60,7 +60,19 @@ const Footer = () => {
                         <div className="list-item-indicator">&larr;</div>
                     </li>
                 </ul>
+                <div className="secondary-label">offsite links</div>
+                <ul>
+                    <li className="list-item" aria-label="email me">
+                        <a href="https://github.com/adhilario1?tab=repositories">github.</a>
+                        <div className="list-item-indicator">&larr;</div>
+                    </li>
+                    <li className="list-item" aria-label="email me">
+                        <a href="https://gitlab.com/adhilario1">gitlab.</a>
+                        <div className="list-item-indicator">&larr;</div>
+                    </li>
+                </ul>
             </div>
+            
         </div>
     )
 }

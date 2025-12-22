@@ -42,40 +42,48 @@ const Home = () => {
                                 <h2 className='tertiary-label-bold gold'>Gallery</h2>
                                 <p>Samples of things I've made over the years.<br/> It's not evrything and will be updated periodically</p>
                             </ div>
+                           {/*} 
                             <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
+                            {*/}
                         </a>
                         <a href='/games'>
                             <div className='text right'>
                                 <h2 className='tertiary-label-bold gold'>Games!</h2>
                                 <p>Check out (or play, hopefully) some games I made</p>
                             </ div>
+                            {/*} 
                             <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
+                            {*/}
                         </a>
                         <a href='/about'>
                             <div className='text left'>
                                 <h2 className='tertiary-label-bold gold'>About</h2>
                                 <p>It's in the name: a short biography of myself with relavant info. (Mostly my educational background.)</p>
                             </ div>
+                            {/*} 
                             <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
+                            {*/}
                         </a>
                         <a href='/projects/this-site'>      
                             <div className='text left'>
                                 <h2 className='tertiary-label-bold gold'>Read About This Site</h2>
                                 <p>Read about how I made this website and what service are availed to keep it running.</p>
                             </ div>
-                            <div className='arrow-empty'>
+                            {/*} 
+                            <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
+                            {*/}
                         </a>
                         <a href='/contact/email'>
                             
@@ -83,15 +91,21 @@ const Home = () => {
                                 <h2 className='tertiary-label-bold gold'>Contact</h2>
                                 <p>Drop me an email!</p>
                             </ div>
-                            <div className='arrow-empty'>
+                            {/*} 
+                            <div className='arrow-container'>
                                 <BsArrowLeftCircle  className='arrow-unselected' size={50}/>
                                 <BsArrowLeftCircleFill  className='arrow' size={50}/>
                             </div>
+                            {*/}
                         </a>
-
+                        <a href="https://github.com/adhilario1?tab=repositories">
+                            <div className='text right'>
+                                <h2 className='tertiary-label-bold gold'>Github</h2>
+                                <p>Some code. </p>
+                            </ div>
+                        </a>
                         
-                        <div/>
-                        <div/>
+                        
                     </div>
 
                 </div>
