@@ -99,6 +99,19 @@ a {
     padding-left: 20px;
 }
 
+.spotlight a{
+    border: 1px 0 white solid;
+    display: flex;
+    padding:30px 15px;
+}
+
+.spotlight a:hover {
+    background-color: antiquewhite;
+    color: #111;
+    
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 686px) {
     .background {
         background-color: #111;

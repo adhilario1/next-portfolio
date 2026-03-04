@@ -36,6 +36,15 @@ const Home = () => {
                         <br />
                         
                     </p>
+                    <div className='spotlight'>
+                        <a href='/2KTechArt'>
+                        <div className='spotlight text'>
+                            <h2 className='tertiary-label-bold gold'>2K Technical Art Graduate Programme Portfolio</h2>
+                            <p>Significant projects I have done related to Technical Art. If you are reviewing my portfolio for the grad program, click here!</p>
+                        </div>
+                    </a>
+                    </div>
+                    
                     <div className='link-grid'>
                         <a href='/projects/gallery'>
                             <div className='text left'>

@@ -17,6 +17,12 @@
     padding-top: 101px;
 }
 
+.page-head {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
 @media only screen and (min-width: 686px) {
     .bounding-box {
         width: 80vw;

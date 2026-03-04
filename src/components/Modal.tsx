@@ -7,16 +7,21 @@ import { Post } from "@/scripts/Post";
 
 import '@/css/Modal.css'
 import { BiX, BiXCircle } from "react-icons/bi";
+import { Chilanka } from "next/font/google";
 
 interface Props {
     className?: string;
     post?: Post;
     game?: Game;
     breakpoint?:number;
+    static_thumbnail?: string; //only fior use if used as parent of content
+    title?: string;
+    description?: string;
+    children?: React.ReactElement;
     //onClose: Function;
 }
 
-const Modal = ({className, post, game, breakpoint}: Props) => {
+const Modal = ({className, post, game, breakpoint, static_thumbnail, title, description, children}: Props) => {
     const [width, setWidth] = useState(1366);
     const [height, setHeight] = useState(768);
     const [mobile, setMobile] = useState(false);
@@ -87,24 +92,22 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
         return (
             <>
             <div className={"open-modal"} onClick={toggleModal}>
-                    <div>
-                        {contentType(true, post?.type)}
-                    </div>
-                    
-                        <div className="meta-data">
-                            <div>
-                                <h2 className="secondary-label">{post?.title}</h2>
-                                <h3><i>{post?.discipline} | {post?.project} {post?.year}</i></h3>
-                            </div>
-                            <div className="description text">
-                                <p>
-                                    {parse(post?.description)}
-                                </p>
-                            </div>
-                        </div>
-                    
-                    
+                <div>
+                    {contentType(true, post?.type)}
                 </div>
+                    
+                <div className="meta-data">
+                    <div>
+                        <h2 className="secondary-label">{post?.title}</h2>
+                        <h3><i>{post?.discipline} | {post?.project} {post?.year}</i></h3>
+                    </div>
+                    <div className="description text">
+                        <p>
+                            {parse(post?.description)}
+                        </p>
+                    </div>
+                </div> 
+            </div>
             {modal && (
                 <div className="modal-container">
                     <div onClick={toggleModal} className="overlay" />
@@ -137,7 +140,40 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
             )}
             </>
         )
-    } else {
+    } else if (children) {
+        return (
+        <>
+            <div className={"open-modal"} onClick={toggleModal}>
+                <img className={`full image`} src={static_thumbnail} alt="/assets/images/default.jpg"></img>
+                
+                <div className="meta-data">
+                    <div>
+                        <h2 className="secondary-label">{title}</h2>
+                    </div>
+                    <div className="description text">
+                        {description}
+                    </div>
+                </div> 
+            </div>
+            {modal && (
+                <div className="modal-container">
+                    <div onClick={toggleModal} className="overlay" />
+                    <div className={`viewer`}>
+                        <div className="viewer-head">
+                            <div className="mobile secondary-label">
+                                <h2>{title}</h2>
+                            </div>
+                            <button className="close-modal" onClick={toggleModal}><BiXCircle size={30} /></button>
+                        </div>
+                        <div className="viewport-body">
+                            {children}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
+        )
+    }else {
         return (
             <>
             <p>Oops, nothing to show!</p>

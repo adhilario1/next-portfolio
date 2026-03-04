@@ -60,9 +60,11 @@ function SummerProject() {
         <>
         {/*<Header />*/}
         <div className='background'/>
+        {/*}
         <a id='back-arrow' href='/games'>  
           <BsArrowLeftCircle size={40}/>
         </a>
+        {*/}
         <div>
           <div>
             {true && (
