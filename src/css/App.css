@@ -1,7 +1,35 @@
-body {
-  overflow-x: hidden;
+/* HTML level tags */
+
+html {
+  --text-color: white;
+  --bg-color: black;
+  --primary-highlight: teal;
+  --secondary-highlight: DarkGoldenRod;
+
 }
 
+body {
+  overflow-x: hidden;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* container tags */
+.primary-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.page-container {
+  width: 80vw;
+  background-color: red;
+}
+
+/* Text Format Tags */
+.title {
+  display: block;
+}
 .App {
   text-align: center;
 }
@@ -28,7 +56,7 @@ body {
 }
 
 .App-link {
-  color: #ffbf00;;
+  color: var(--primary-highlight);
 }
 
 .background {
@@ -38,7 +66,7 @@ body {
   z-index: -10;
   top: 0;
   left: 0;
-  background-color: antiquewhite/*#003153*/;
+  
 }
 
 .content {
@@ -47,7 +75,7 @@ body {
   min-height: 75vh;
   padding: 1em;
   border-radius: 5px;
-  border: 2pt double #ff8b00;
+  border: 2pt double var(--primary-highlight);
   background-color: #111;
   color: antiquewhite;
   overflow-y: hidden;

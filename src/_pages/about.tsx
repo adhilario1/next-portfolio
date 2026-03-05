@@ -14,7 +14,7 @@ const About = () => {
         <>
         <Header/>
         <Body>
-            <div className="content about">
+            <div className="page-container">
                 <h1 className="secondary-label">about.</h1>
                 <div className="profile">
                     <img src='./assets/images/clown.jpeg' />
