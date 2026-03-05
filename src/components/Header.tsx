@@ -36,7 +36,7 @@ const Header = () => {
         <div className='header'>
             <div className='container'>
                 <div id="title" className="title primary-label">
-                    <a href="/" ><h1>Adam Hilario</h1></a>
+                    <a href="/" ><h1>billy's.biz</h1></a>
                 </div>
                 <div className={`mobile-nav ${scroll? "mobile-sticky" : ""}`}>
                     <SideBar />

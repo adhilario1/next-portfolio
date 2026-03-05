@@ -37,6 +37,7 @@ const Exhibit = () => {
                                 However, the choice of using GraphQL for the games page was deliberate since it was my intention to make that page more interactive and dynamic, which GraphQL us better suited for.
                                 Although, in what way that page will be more "interactive and dynamic," I don't know yet.  
                                 <br/><br/> 
+                                
                             </p>
                             <h2 className='secondary-label'>So, Why The Name?</h2>
                             <p className='formatted-text indented'>

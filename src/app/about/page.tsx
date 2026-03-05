@@ -1,8 +1,11 @@
 import React from "react";
 import '@/css/About.css';
+import Header from "@/components/Header";
 const AboutPage = () => {
     return (
         <div className="page-container">
+            <Header></Header>
+            <div className="page-body">
                 <h1 className="text-3xl font-bold underline">about.</h1>
                 <div className="profile">
                     <img src='./assets/images/clown.jpeg' />
@@ -78,7 +81,7 @@ const AboutPage = () => {
                     </p>
                     <div className="work-sample">
                         <div className="slideshow-bob">
-                            <iframe src="./assets/pdf/Sidney.pdf" width="560" height="375"/>
+                            <iframe src="./assets/pdf/Sidney.pdf" />
                             <p><b><i>Figure 2.1: Presentation Slideshow</i></b></p>
                         </div>
                         <div className="video">
@@ -90,6 +93,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

@@ -5,7 +5,7 @@ html {
   --bg-color: black;
   --primary-highlight: teal;
   --secondary-highlight: DarkGoldenRod;
-
+  --mobile-width: 685;
 }
 
 body {
@@ -17,13 +17,22 @@ body {
 /* container tags */
 .primary-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  
 }
 
 .page-container {
-  width: 80vw;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-body {
+  display: block;
+  width: 75vw;
+  min-height: 100%;
+  
+  padding: 1em;
 }
 
 /* Text Format Tags */
@@ -76,8 +85,8 @@ body {
   padding: 1em;
   border-radius: 5px;
   border: 2pt double var(--primary-highlight);
-  background-color: #111;
-  color: antiquewhite;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -129,13 +138,9 @@ body {
   
   overflow-x: hidden;
 }
-@media only screen and (max-width: 685px) {
-  .background {
-    background-color: #111;
-  }
-  
-  .content {
-    width: 100vw;
+@media only screen and (max-width: 800px) {
+  .page-body{
+    width: 96vw;
   }
 }
 

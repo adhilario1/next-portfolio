@@ -33,6 +33,10 @@
 .slideshow-bob iframe{
     display: block;
     margin: auto;
+    min-width: 30vw;
+    width: auto;
+    height: 500px
+    
 }
 .slideshow-bob p{
     text-align: center;
@@ -41,7 +45,7 @@
     display: block;
     margin: auto;
     border: none;
-    width:70vw;
+    width: 30vw;
     max-width: 560px;
     height: calc(calc(70vw*315/560));
     max-height: 315px;
@@ -50,4 +54,39 @@
 .work-sample {
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .work-sample{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    justify-items: center;
+    align-self: center;
+    
+  }
+
+  .slideshow-bob {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .slideshow-bob iframe {
+    width: 90%;
+  }
+
+  .video {
+    width: 100%;
+    height: 100vh;
+  }
+  .video iframe{
+    width: 95vw;
+  }
 }
